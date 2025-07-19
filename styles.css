@@ -175,4 +175,32 @@ details {
   .text-block {
     width: 100%;
   }
+/* === Floating Link Buttons on Home Page === */
+.floating-links {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 9999;
+}
+
+.floating-link {
+  background-color: #789E2D;
+  color: white;
+  padding: 12px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease;
+}
+
+.floating-link:hover {
+  background-color: #5F7F24;
+  color: #F5F7EC;
+}
 }
