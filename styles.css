@@ -100,12 +100,20 @@ details{
    ------------------------------------------------- */
 
 /* --- Shared helper --- */
-.text-with-image{
-  display:flex;flex-wrap:wrap;align-items:center;gap:30px;margin-bottom:60px;
+.text-with-image {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
 }
-.block-image{
-  border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.15);
-  height:auto;display:block;
+.block-image {
+  width: 240px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+
 }
 .text-block{flex:1 1 300px;min-width:260px;}
 
@@ -128,8 +136,12 @@ details{
 /* -------------------------------------------------
    === RESPONSIVE TWEAKS ===
    ------------------------------------------------- */
-@media (max-width:768px){
-  .text-with-image{flex-direction:column;text-align:left;}
-  .block-image{width:100%!important;order:unset;margin-bottom:20px;}
-  .text-block{width:100%;}
+@media (max-width: 768px) {
+  .text-with-image {
+    flex-direction: column;
+  }
+  .block-image {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
