@@ -228,33 +228,58 @@ details {
   order: 1;
 }
 
-/* === Counselling Page Layout === */
+/* === Counselling Page Layout Fixes === */
 .counselling-only .text-with-image {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  margin-bottom: 60px;
+  align-items: flex-start;
+  justify-content: space-between;
   gap: 30px;
+  margin-bottom: 60px;
 }
-.counselling-only .text-block {
-  flex: 1 1 300px;
-  min-width: 260px;
-}
+
 .counselling-only .block-image {
-  flex: 0 0 260px;
+  flex: 0 0 240px;
   max-width: 100%;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
+
+.counselling-only .text-block {
+  flex: 1 1 300px;
+  min-width: 260px;
+}
+
 .counselling-only .block-image.left {
   order: 0;
 }
 .counselling-only .block-image.right {
   order: 1;
 }
+
 .counselling-only .text-without-image {
   margin-top: 60px;
+}
+
+/* === Responsive Fix === */
+@media (max-width: 768px) {
+  .counselling-only .text-with-image {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .counselling-only .block-image {
+    width: 100%;
+    order: unset;
+    margin: 0 auto 20px auto;
+  }
+
+  .counselling-only .text-block {
+    width: 100%;
+  }
+}
+
 }
 
 /* === Welcome Page === */
