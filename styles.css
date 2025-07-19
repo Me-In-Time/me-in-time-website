@@ -278,7 +278,6 @@ details {
   .counselling-only .text-block {
     width: 100%;
   }
-}
 
 /* === Welcome Page === */
 .welcome-only .text-with-image {
@@ -308,24 +307,18 @@ details {
 
 /* === Responsive Tweaks === */
 @media (max-width: 768px) {
-  .coaching-only .text-with-image,
-  .counselling-only .text-with-image,
-  .welcome-only .text-with-image {
+  .text-with-image {
     flex-direction: column;
     text-align: left;
   }
-
-  .coaching-only .block-image,
-  .counselling-only .block-image,
-  .welcome-only .block-image {
+  .block-image {
     order: unset;
     width: 100%;
     margin-bottom: 20px;
   }
-
-  .coaching-only .text-block,
-  .counselling-only .text-block,
-  .welcome-only .text-block {
+  .text-block {
     width: 100%;
   }
+}
+
 
