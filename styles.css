@@ -1,324 +1,135 @@
-/* === Reset and Base Layout === */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* === Reset & Base Layout === */
+*{box-sizing:border-box;margin:0;padding:0;}
 
-body {
-  font-family: 'Lora', serif;
-  color: #555A4A;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  background-color: #E7E9D1;
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
-  text-align: left;
-  position: relative;
+body{
+  font-family:'Lora',serif;
+  color:#555A4A;
+  font-size:1.1rem;
+  line-height:1.6;
+  background:#E7E9D1;
+  max-width:900px;
+  margin:40px auto;
+  padding:20px;
+  text-align:left;
 }
 
 /* === Headings === */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  color: #567235;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  line-height: 1.2;
+h1,h2,h3,h4,h5,h6{
+  font-family:'Montserrat',sans-serif;
+  font-weight:700;
+  color:#567235;
+  margin:40px 0 20px;
+  line-height:1.2;
 }
-h1 {
-  font-size: 2.4rem;
-}
-p {
-  margin-bottom: 20px;
-  text-align: justify;
-}
-ul {
-  margin-bottom: 20px;
-  padding-left: 20px;
-}
-a {
-  color: #69892C;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
+h1{font-size:2.4rem;}
+
+p{margin:0 0 20px;text-align:justify;}
+ul{margin:0 0 20px 0;padding-left:20px;}
+a{color:#69892C;text-decoration:none;}
+a:hover{text-decoration:underline;}
 
 /* === Navigation === */
-nav {
-  position: relative;
-  background-image: url("images/manchester-skyline.jpg");
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-  margin: 0 auto 40px auto;
-  max-width: 1100px;
-  padding: 20px 0;
-  box-shadow: 0 4px 12px rgba(70, 90, 40, 0.5);
+nav{
+  position:relative;
+  background:url("images/manchester-skyline.jpg") center/cover no-repeat;
+  border-radius:10px;
+  margin:0 auto 40px;
+  max-width:1100px;
+  padding:20px 0;
+  box-shadow:0 4px 12px rgba(70,90,40,.5);
 }
-nav::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(255, 255, 255, 0.4);
-  z-index: 0;
-  border-radius: 10px;
+nav::before{
+  content:"";
+  position:absolute;inset:0;
+  background:rgba(255,255,255,.4);
+  border-radius:10px;
+  z-index:0;
 }
-.nav-inner {
-  position: relative;
-  z-index: 1;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.nav-inner{
+  position:relative;z-index:1;
+  max-width:900px;margin:0 auto;padding:0 20px;
+  display:flex;justify-content:space-between;align-items:center;
 }
-.site-logo img {
-  height: 120px;
-  width: auto;
+.site-logo img{height:120px;width:auto;}
+nav ul{display:flex;gap:20px;list-style:none;flex-wrap:wrap;}
+nav a{
+  color:#000;
+  font-family:'Montserrat',sans-serif;font-weight:700;
+  padding:10px 15px;border-radius:30px;font-size:1.4rem;
+  background:rgba(255,255,255,.3);
+  transition:.3s background;
 }
-nav ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-  flex-wrap: wrap;
-}
-nav a {
-  color: black;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  padding: 10px 15px;
-  border-radius: 30px;
-  font-size: 1.4rem;
-  background-color: rgba(255, 255, 255, 0.3);
-  transition: background-color 0.3s ease;
-}
-nav a:hover {
-  background-color: rgba(255, 255, 255, 0.6);
-}
+nav a:hover{background:rgba(255,255,255,.6);}
 
-/* === Buttons === */
-.button-link,
-.contact-button,
-.sticky-contact {
-  display: inline-block;
-  background-color: #789E2D;
-  color: white;
-  padding: 12px 25px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 1rem;
-  border-radius: 30px;
-  text-decoration: none;
-  margin-bottom: 12px;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+/* === Buttons / Sticky Contact === */
+.button-link,.contact-button,.sticky-contact{
+  display:inline-block;
+  background:#789E2D;color:#fff;
+  padding:12px 25px;border-radius:30px;
+  font:700 1rem 'Montserrat',sans-serif;
+  text-decoration:none;margin-bottom:12px;
+  transition:.3s background;box-shadow:0 2px 6px rgba(0,0,0,.1);
 }
-.button-link:hover,
-.contact-button:hover,
-.sticky-contact:hover {
-  background-color: #5F7F24;
-  color: #F5F7EC;
-}
-.button-link.translucent-button,
-.contact-button.translucent-button,
-.sticky-contact.sticky-translucent {
-  background-color: rgba(255, 255, 255, 0.6);
-  color: black;
-  backdrop-filter: blur(5px);
-}
-.button-link.translucent-button:hover,
-.contact-button.translucent-button:hover,
-.sticky-contact.sticky-translucent:hover {
-  background-color: rgba(255, 255, 255, 0.8);
-}
-
-/* === Sticky Contact === */
-.sticky-contact {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 9999;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
+.button-link:hover,.contact-button:hover,.sticky-contact:hover{background:#5F7F24;color:#F5F7EC;}
+.translucent-button,.sticky-translucent{background:rgba(255,255,255,.6);color:#000;backdrop-filter:blur(5px);}
+.translucent-button:hover,.sticky-translucent:hover{background:rgba(255,255,255,.8);}
+.sticky-contact{position:fixed;bottom:20px;right:20px;z-index:9999;box-shadow:0 4px 10px rgba(0,0,0,.2);}
 
 /* === Footer === */
-footer {
-  text-align: left;
-  margin-top: 60px;
-  padding: 20px 0;
-  color: #69892C;
-  font-family: 'Lora', serif;
-  font-size: 0.9rem;
+footer{margin-top:60px;padding:20px 0;color:#69892C;font:0.9rem 'Lora',serif;text-align:left;}
+
+/* === BACP logo === */
+.bacp-logo{display:flex;align-items:center;margin:60px 0 20px;padding-left:10px;}
+.bacp-logo img{height:95px;width:auto;max-width:100%;}
+
+/* === FAQ toggles === */
+summary{font:700 1.15rem 'Montserrat',sans-serif;color:#69892C;cursor:pointer;user-select:none;}
+summary::-webkit-details-marker{display:none;}
+summary::before{content:"► ";color:#789E2D;}
+details[open] summary::before{content:"▼ ";}
+
+/* === Card for details === */
+details{
+  background:#fff;border-radius:6px;padding:20px 25px;margin-bottom:25px;
+  box-shadow:0 2px 6px rgba(120,140,70,.15);
+  font:1rem 'Lora',serif;color:#555A4A;
 }
 
-/* === BACP Logo === */
-.bacp-logo {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin: 60px 0 20px 0;
-  padding-left: 10px;
-}
-.bacp-logo img {
-  height: 95px;
-  width: auto;
-  max-width: 100%;
-}
+/* -------------------------------------------------
+   === PAGE-SPECIFIC LAYOUT BLOCKS ===
+   ------------------------------------------------- */
 
-/* === FAQ Styling === */
-summary {
-  font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.15rem;
-  user-select: none;
-  color: #69892C;
+/* --- Shared helper --- */
+.text-with-image{
+  display:flex;flex-wrap:wrap;align-items:center;gap:30px;margin-bottom:60px;
 }
-summary::-webkit-details-marker {
-  display: none;
+.block-image{
+  border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.15);
+  height:auto;display:block;
 }
-details[open] summary::before {
-  content: "▼ ";
-  color: #789E2D;
-}
-summary::before {
-  content: "► ";
-  color: #789E2D;
-}
-details {
-  background: white;
-  border-radius: 6px;
-  margin-bottom: 25px;
-  padding: 20px 25px;
-  box-shadow: 0 2px 6px rgba(120, 140, 70, 0.15);
-  cursor: pointer;
-  font-family: 'Lora', serif;
-  font-size: 1rem;
-  color: #555A4A;
-}
+.text-block{flex:1 1 300px;min-width:260px;}
 
-/* === Coaching Page Layout === */
-.coaching-only .text-with-image {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 30px;
-  margin-bottom: 60px;
-}
-.coaching-only .block-image {
-  flex: 0 0 240px;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-.coaching-only .text-block {
-  flex: 1 1 300px;
-  min-width: 260px;
-}
-.coaching-only .block-image.left {
-  order: 0;
-}
-.coaching-only .block-image.right {
-  order: 1;
-}
+/* --- Coaching page --- */
+.coaching-only .block-image{flex:0 0 240px;max-width:100%;}
+.coaching-only .block-image.left{order:0;}
+.coaching-only .block-image.right{order:1;}
 
-/* === Counselling Page Layout Fixes === */
-.counselling-only .text-with-image {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 30px;
-  margin-bottom: 60px;
-}
+/* --- Counselling page --- */
+.counselling-only .block-image{flex:0 0 240px;max-width:100%;}
+.counselling-only .block-image.left{order:0;}
+.counselling-only .block-image.right{order:1;}
+.counselling-only .text-without-image{margin-top:60px;}
 
-.counselling-only .block-image {
-  flex: 0 0 240px;
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
+/* --- Welcome page --- */
+.welcome-only .block-image{flex:0 0 260px;max-width:100%;}
+.welcome-only .block-image.left{order:0;}
+.welcome-only .block-image.right{order:1;}
 
-.counselling-only .text-block {
-  flex: 1 1 300px;
-  min-width: 260px;
+/* -------------------------------------------------
+   === RESPONSIVE TWEAKS ===
+   ------------------------------------------------- */
+@media (max-width:768px){
+  .text-with-image{flex-direction:column;text-align:left;}
+  .block-image{width:100%!important;order:unset;margin-bottom:20px;}
+  .text-block{width:100%;}
 }
-
-.counselling-only .block-image.left {
-  order: 0;
-}
-.counselling-only .block-image.right {
-  order: 1;
-}
-
-.counselling-only .text-without-image {
-  margin-top: 60px;
-}
-
-/* === Responsive Fix === */
-@media (max-width: 768px) {
-  .counselling-only .text-with-image {
-    flex-direction: column;
-    text-align: left;
-  }
-
-  .counselling-only .block-image {
-    width: 100%;
-    order: unset;
-    margin: 0 auto 20px auto;
-  }
-
-  .counselling-only .text-block {
-    width: 100%;
-
-
-/* === Welcome Page === */
-.welcome-only .text-with-image {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-bottom: 60px;
-  gap: 30px;
-}
-.welcome-only .text-block {
-  flex: 1 1 300px;
-  min-width: 260px;
-}
-.welcome-only .block-image {
-  flex: 0 0 260px;
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-.welcome-only .block-image.left {
-  order: 0;
-}
-.welcome-only .block-image.right {
-  order: 1;
-}
-
-/* === Responsive Tweaks === */
-@media (max-width: 768px) {
-  .text-with-image {
-    flex-direction: column;
-    text-align: left;
-  }
-  .block-image {
-    order: unset;
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  .text-block {
-    width: 100%;
-  }
-}
-
-
