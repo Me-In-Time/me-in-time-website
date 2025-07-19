@@ -219,6 +219,7 @@ details {
   font-size: 1rem;
   color: #555A4A;
 }
+/* Coaching Page Layout */
 .coaching-only .text-with-image {
   display: flex;
   flex-wrap: wrap;
@@ -244,10 +245,12 @@ details {
 .coaching-only .block-image.left {
   order: 0;
 }
+
 .coaching-only .block-image.right {
   order: 1;
 }
 
+/* Responsive Tweaks */
 @media (max-width: 768px) {
   .coaching-only .text-with-image {
     flex-direction: column;
@@ -258,6 +261,10 @@ details {
     order: unset;
     width: 100%;
     margin-bottom: 20px;
+  }
+
+  .coaching-only .text-block {
+    width: 100%;
   }
 }
 
