@@ -280,8 +280,6 @@ details {
   }
 }
 
-}
-
 /* === Welcome Page === */
 .welcome-only .text-with-image {
   display: flex;
@@ -330,4 +328,4 @@ details {
   .welcome-only .text-block {
     width: 100%;
   }
-}
+
