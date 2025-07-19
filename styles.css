@@ -310,16 +310,24 @@ details {
 
 /* === Responsive Tweaks === */
 @media (max-width: 768px) {
-  .text-with-image {
+  .coaching-only .text-with-image,
+  .counselling-only .text-with-image,
+  .welcome-only .text-with-image {
     flex-direction: column;
     text-align: left;
   }
-  .block-image {
+
+  .coaching-only .block-image,
+  .counselling-only .block-image,
+  .welcome-only .block-image {
     order: unset;
     width: 100%;
     margin-bottom: 20px;
   }
-  .text-block {
+
+  .coaching-only .text-block,
+  .counselling-only .text-block,
+  .welcome-only .text-block {
     width: 100%;
   }
 }
