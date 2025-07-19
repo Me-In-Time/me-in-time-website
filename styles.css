@@ -1,4 +1,4 @@
-/* Reset and Base Layout */
+/* === Reset and Base Layout === */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -18,7 +18,7 @@ body {
   position: relative;
 }
 
-/* Headings */
+/* === Headings === */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
@@ -27,30 +27,26 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 20px;
   line-height: 1.2;
 }
-
 h1 {
   font-size: 2.4rem;
 }
-
 p {
   margin-bottom: 20px;
   text-align: justify;
 }
-
 ul {
   margin-bottom: 20px;
   padding-left: 20px;
 }
-
 a {
   color: #69892C;
   text-decoration: none;
 }
-
 a:hover {
   text-decoration: underline;
 }
-/* Navigation */
+
+/* === Navigation === */
 nav {
   position: relative;
   background-image: url("images/manchester-skyline.jpg");
@@ -62,19 +58,15 @@ nav {
   padding: 20px 0;
   box-shadow: 0 4px 12px rgba(70, 90, 40, 0.5);
 }
-
 nav::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   background: rgba(255, 255, 255, 0.4);
   z-index: 0;
   border-radius: 10px;
 }
-
 .nav-inner {
   position: relative;
   z-index: 1;
@@ -85,19 +77,16 @@ nav::before {
   justify-content: space-between;
   align-items: center;
 }
-
 .site-logo img {
   height: 120px;
   width: auto;
 }
-
 nav ul {
   display: flex;
   gap: 20px;
   list-style: none;
   flex-wrap: wrap;
 }
-
 nav a {
   color: black;
   font-family: 'Montserrat', sans-serif;
@@ -108,11 +97,11 @@ nav a {
   background-color: rgba(255, 255, 255, 0.3);
   transition: background-color 0.3s ease;
 }
-
 nav a:hover {
   background-color: rgba(255, 255, 255, 0.6);
 }
-/* Buttons */
+
+/* === Buttons === */
 .button-link,
 .contact-button,
 .sticky-contact {
@@ -129,14 +118,12 @@ nav a:hover {
   transition: background-color 0.3s ease;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
-
 .button-link:hover,
 .contact-button:hover,
 .sticky-contact:hover {
   background-color: #5F7F24;
   color: #F5F7EC;
 }
-
 .button-link.translucent-button,
 .contact-button.translucent-button,
 .sticky-contact.sticky-translucent {
@@ -144,14 +131,13 @@ nav a:hover {
   color: black;
   backdrop-filter: blur(5px);
 }
-
 .button-link.translucent-button:hover,
 .contact-button.translucent-button:hover,
 .sticky-contact.sticky-translucent:hover {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-/* Sticky Contact Button */
+/* === Sticky Contact === */
 .sticky-contact {
   position: fixed;
   bottom: 20px;
@@ -160,7 +146,7 @@ nav a:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Footer */
+/* === Footer === */
 footer {
   text-align: left;
   margin-top: 60px;
@@ -170,7 +156,7 @@ footer {
   font-size: 0.9rem;
 }
 
-/* BACP Logo */
+/* === BACP Logo === */
 .bacp-logo {
   display: flex;
   justify-content: flex-start;
@@ -178,14 +164,13 @@ footer {
   margin: 60px 0 20px 0;
   padding-left: 10px;
 }
-
 .bacp-logo img {
   height: 95px;
   width: auto;
   max-width: 100%;
 }
 
-/* FAQ Styling */
+/* === FAQ Styling === */
 summary {
   font-weight: 700;
   font-family: 'Montserrat', sans-serif;
@@ -193,21 +178,17 @@ summary {
   user-select: none;
   color: #69892C;
 }
-
 summary::-webkit-details-marker {
   display: none;
 }
-
 details[open] summary::before {
   content: "▼ ";
   color: #789E2D;
 }
-
 summary::before {
   content: "► ";
   color: #789E2D;
 }
-
 details {
   background: white;
   border-radius: 6px;
@@ -219,7 +200,8 @@ details {
   font-size: 1rem;
   color: #555A4A;
 }
-/* Coaching Page Layout */
+
+/* === Coaching Page Layout === */
 .coaching-only .text-with-image {
   display: flex;
   flex-wrap: wrap;
@@ -227,7 +209,6 @@ details {
   gap: 30px;
   margin-bottom: 60px;
 }
-
 .coaching-only .block-image {
   flex: 0 0 240px;
   max-width: 100%;
@@ -236,97 +217,18 @@ details {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
-
 .coaching-only .text-block {
   flex: 1 1 300px;
   min-width: 260px;
 }
-
 .coaching-only .block-image.left {
   order: 0;
 }
-
 .coaching-only .block-image.right {
   order: 1;
 }
 
-/* Responsive Tweaks */
-@media (max-width: 768px) {
-  .coaching-only .text-with-image {
-    flex-direction: column;
-    text-align: left;
-  }
-
-  .coaching-only .block-image {
-    order: unset;
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .coaching-only .text-block {
-    width: 100%;
-
-
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .coaching-only .text-with-image {
-    flex-direction: column;
-    text-align: left;
-  }
-
-  .coaching-only .block-image {
-    width: 100%;
-    order: unset;
-    margin: 0 auto 20px auto;
-  }
-
-  .coaching-only .text-block {
-    width: 100%;
-
-}
-/* Counselling Page Layout */
-body.counselling-only {
-  font-family: 'Lora', serif;
-  color: #555A4A;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  background-color: #E7E9D1;
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
-  text-align: left;
-}
-
-.counselling-only h1,
-.counselling-only h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  color: #567235;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  line-height: 1.2;
-}
-
-.counselling-only p {
-  margin-bottom: 20px;
-  text-align: justify;
-}
-
-.counselling-only ul {
-  margin-bottom: 20px;
-  padding-left: 20px;
-}
-
-.counselling-only a {
-  color: #69892C;
-  text-decoration: none;
-}
-
-.counselling-only a:hover {
-  text-decoration: underline;
-}
-
-/* Layout Containers */
+/* === Counselling Page Layout === */
 .counselling-only .text-with-image {
   display: flex;
   flex-wrap: wrap;
@@ -334,12 +236,10 @@ body.counselling-only {
   margin-bottom: 60px;
   gap: 30px;
 }
-
 .counselling-only .text-block {
   flex: 1 1 300px;
   min-width: 260px;
 }
-
 .counselling-only .block-image {
   flex: 0 0 260px;
   max-width: 100%;
@@ -347,32 +247,17 @@ body.counselling-only {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
-
 .counselling-only .block-image.left {
   order: 0;
 }
-
 .counselling-only .block-image.right {
   order: 1;
 }
-
 .counselling-only .text-without-image {
   margin-top: 60px;
 }
-/* Responsive Tweaks */
-@media (max-width: 768px) {
-  .counselling-only .text-with-image {
-    flex-direction: column;
-    text-align: left;
-  }
 
-  .counselling-only .block-image {
-    order: unset;
-    width: 100%;
-    margin: 0 auto 20px auto;
-  }
-
-/* Welcome Page Text & Image Tweaks */
+/* === Welcome Page === */
 .welcome-only .text-with-image {
   display: flex;
   flex-wrap: wrap;
@@ -380,12 +265,10 @@ body.counselling-only {
   margin-bottom: 60px;
   gap: 30px;
 }
-
 .welcome-only .text-block {
   flex: 1 1 300px;
   min-width: 260px;
 }
-
 .welcome-only .block-image {
   flex: 0 0 260px;
   max-width: 100%;
@@ -393,47 +276,25 @@ body.counselling-only {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
-
 .welcome-only .block-image.left {
   order: 0;
 }
-
 .welcome-only .block-image.right {
   order: 1;
 }
 
+/* === Responsive Tweaks === */
 @media (max-width: 768px) {
-  .welcome-only .text-with-image {
+  .text-with-image {
     flex-direction: column;
     text-align: left;
   }
-
-  .welcome-only .block-image {
+  .block-image {
     order: unset;
-    width: 100%;
-    margin: 0 auto 20px auto;
-  }
-
-@media (max-width: 768px) {
-  .coaching-only .intro-section {
-    flex-direction: column;
-    text-align: left;
-  }
-
-  .coaching-only .coaching-photo {
     width: 100%;
     margin-bottom: 20px;
   }
-
-  .coaching-only .text-with-image img.block-image {
-    float: none;
-    display: block;
-    margin: 0 auto 20px auto;
+  .text-block {
     width: 100%;
   }
-
-  .coaching-only .text-with-image,
-  .coaching-only .text-block {
-    text-align: left;
-  }
-
+}
