@@ -219,38 +219,48 @@ details {
   font-size: 1rem;
   color: #555A4A;
 }
-/* Coaching Page Layout */
 .coaching-only .text-with-image {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
   align-items: center;
+  gap: 30px;
   margin-bottom: 60px;
 }
 
-.coaching-only .text-block {
-  flex: 1 1 60%;
-  min-width: 260px;
-}
-
 .coaching-only .block-image {
-  flex: 0 0 35%;
+  flex: 0 0 240px;
   max-width: 100%;
   height: auto;
+  display: block;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.coaching-only .text-block {
+  flex: 1 1 300px;
+  min-width: 260px;
 }
 
 .coaching-only .block-image.left {
   order: 0;
 }
-
 .coaching-only .block-image.right {
   order: 1;
 }
 
-.coaching-only .text-without-image {
-  margin-top: 60px;
+@media (max-width: 768px) {
+  .coaching-only .text-with-image {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .coaching-only .block-image {
+    order: unset;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
 }
 
 /* Responsive tweaks */
