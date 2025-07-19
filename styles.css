@@ -293,64 +293,7 @@ details {
   }
 }
 
-}
-/* Coaching Page Layout */
-.coaching-only .intro-section {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  margin-bottom: 60px;
-  align-items: center;
-}
 
-.coaching-only .intro-text {
-  flex: 1 1 300px;
-  min-width: 260px;
-}
-
-.coaching-only .coaching-photo {
-  flex: 0 0 240px;
-  max-width: 100%;
-}
-
-.coaching-only .coaching-photo img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.coaching-only .text-with-image {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-bottom: 60px;
-  gap: 30px;
-}
-
-.coaching-only .text-block {
-  flex: 1 1 300px;
-  min-width: 260px;
-}
-
-.coaching-only .block-image {
-  flex: 0 0 240px;
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.coaching-only .block-image.left {
-  order: 0;
-}
-
-.coaching-only .block-image.right {
-  order: 1;
-}
-
-.coaching-only .text-without-image {
-  margin-top: 60px;
 }
 
 /* Responsive Tweaks */
