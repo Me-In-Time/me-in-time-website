@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome | Me In Time Counselling & Coaching</title>
+  <meta name="description" content="Welcome to Me In Time – a space for reflection, support, and moving forward at your own pace." />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body class="welcome-only">
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-inner">
+      <div class="site-logo">
+        <a href="index.html">
+          <img src="images/meintime.png" alt="Me In Time logo" />
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="welcome-2.html" aria-current="page">Welcome</a></li>
+        <li><a href="counselling.html">Counselling</a></li>
+        <li><a href="coaching.html">Coaching</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQs</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <div class="intro-text">
+      <div class="text-with-image">
+        <div class="text-block">
+          <h1>Welcome to Me In Time</h1>
+          <p>Thanks for stopping by. Whether you’re here because you’re struggling, curious about therapy or coaching, or just thinking things through — I hope this space feels calm, grounded, and genuinely welcoming. Me In Time is about creating room for reflection, growth, and real connection. No pressure. No judgement. Just time for you, as you are.</p>
+        </div>
+        <img src="images/welcome1.png" alt="Sliding doors moment - Me In Time" class="block-image right" />
+      </div>
+
+      <div class="text-with-image">
+        <img src="images/welcome2.png" alt="Finding direction again - Me In Time" class="block-image left" />
+        <div class="text-block">
+          <h2>Maybe You’re at a Crossroads</h2>
+          <p>Or maybe you’ve just taken a wrong turn. Therapy and coaching don’t always start with a crisis — sometimes they begin with a quiet sense that things could be different. That something isn’t sitting right. That you’ve lost track of yourself a little. If that’s where you are, you’re not alone.</p>
+        </div>
+      </div>
+
+      <div class="text-with-image">
+        <div class="text-block">
+          <h2>You Don’t Have to Walk It All Alone</h2>
+          <p>This isn’t about quick fixes. It’s about walking alongside you as you find your own pace, path, and clarity. Whether we’re working through grief, overwhelm, identity, or simply making space to breathe again — I’ll meet you with warmth, honesty, and respect.</p>
+        </div>
+        <img src="images/welcome3.png" alt="Walking alongside - Me In Time" class="block-image right" />
+      </div>
+
+      <div class="text-without-image">
+        <h2>Why “Me In Time”?</h2>
+        <p>Because we all need a moment to find ourselves — not just who we were, or who we feel we should be, but who we are now. This practice is named after that idea: that given space, support, and time, we begin to meet ourselves more gently. And from there, new things become possible.</p>
+        <p>If you’d like to know more, feel free to explore the site or <a href="contact.html">get in touch</a>.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Me In Time | Stuart Walker Counselling
+  </footer>
+
+  <!-- Sticky Contact Button -->
+  <a href="contact.html" class="sticky-contact sticky-translucent">￼ Get in Touch</a>
+</body>
+</html>
