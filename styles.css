@@ -265,8 +265,7 @@ details {
 
   .coaching-only .text-block {
     width: 100%;
-  }
-}
+
 
 }
 
@@ -285,8 +284,6 @@ details {
 
   .coaching-only .text-block {
     width: 100%;
-  }
-}
 
 }
 /* Counselling Page Layout */
@@ -376,7 +373,6 @@ body.counselling-only {
     width: 100%;
     margin: 0 auto 20px auto;
   }
-}
 
 /* Welcome Page Text & Image Tweaks */
 .welcome-only .text-with-image {
