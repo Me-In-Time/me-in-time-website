@@ -235,4 +235,67 @@ details {
 .floating-link.translucent-button:hover {
   background: rgba(255,255,255,0.8) !important;
 }
+@media screen and (max-width: 768px) {
+  body {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  .text-with-image {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-with-image .text-block,
+  .text-with-image img {
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .block-image.left,
+  .block-image.right {
+    float: none;
+    display: block;
+    margin: 20px auto;
+  }
+
+  .nav-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 10px;
+  }
+
+  .site-logo img {
+    max-width: 150px;
+    margin-bottom: 10px;
+  }
+
+  .contact-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .sticky-contact {
+    bottom: 20px;
+    right: 20px;
+    font-size: 14px;
+    padding: 10px 14px;
+  }
 
