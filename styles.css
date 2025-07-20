@@ -104,11 +104,22 @@ footer {
 /* === FAQ toggles === */
 summary {
   font: 700 1.15rem 'Montserrat', sans-serif;
-  color: #69892C; cursor: pointer; user-select: none;
+  color: #69892C;
+  cursor: pointer;
+  user-select: none;
 }
+
 summary::-webkit-details-marker { display: none; }
-summary::before { content: "► "; color: #789E2D; }
-details[open] summary::before { content: "▼ "; }
+summary::marker { display: none; }  /* ✅ Add this line */
+
+summary::before {
+  content: "► ";
+  color: #789E2D;
+}
+
+details[open] summary::before {
+  content: "▼ ";
+}
 
 /* === Card for details === */
 details {
