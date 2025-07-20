@@ -341,14 +341,21 @@ details {
     text-align: left;
   }
 
-  .img-wrap-left,
-  .img-wrap-right {
-    float: none;
-    display: block;
-    margin: 0 auto 20px;
-    width: 100%;
-    max-width: 100%;
-  }
+ .img-wrap-left,
+.img-wrap-right {
+  float: none !important;
+  display: block;
+  margin: 0 auto 20px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.text-with-image {
+  flex-direction: column !important;
+  align-items: center;
+  gap: 20px;
+}
+
 
   .nav-inner {
     flex-direction: column;
@@ -393,5 +400,6 @@ details {
     border-radius: 12px;
   }
 }
+
 
 
