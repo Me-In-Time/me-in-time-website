@@ -1,6 +1,11 @@
 /* === Reset & Base Layout === */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Lora', serif;
   color: #555A4A;
@@ -10,25 +15,24 @@ body {
   max-width: 900px;
   margin: 40px auto;
   padding: 20px;
-  text-align: left;
+  text-align: justify;
 }
 
-/* === Headings === */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   color: #567235;
   margin: 40px 0 20px;
   line-height: 1.2;
+  text-align: justify;
 }
 h1 { font-size: 2.4rem; }
 
 p { margin: 0 0 20px; text-align: justify; }
-ul { margin: 0 0 20px; padding-left: 20px; }
+ul { margin: 0 0 20px; padding-left: 20px; text-align: justify; }
 a { color: #69892C; text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* === Navigation === */
 nav {
   position: relative;
   background: url("images/manchester-skyline.jpg") center/cover no-repeat;
@@ -61,7 +65,6 @@ nav a {
 }
 nav a:hover { background: rgba(255, 255, 255, .6); }
 
-/* === Buttons / Sticky Contact === */
 .button-link,
 .contact-button,
 .sticky-contact {
@@ -86,13 +89,8 @@ nav a:hover { background: rgba(255, 255, 255, .6); }
 
 .translucent-button,
 .sticky-translucent {
-  display: inline-block;
   background: rgba(255, 255, 255, 0.6);
   color: #000;
-  padding: 12px 25px;
-  border-radius: 30px;
-  font: 700 1rem 'Montserrat', sans-serif;
-  text-decoration: none;
   backdrop-filter: blur(5px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   transition: background-color 0.3s ease;
@@ -109,19 +107,17 @@ nav a:hover { background: rgba(255, 255, 255, .6); }
   bottom: 20px;
   right: 20px;
   z-index: 9999;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  padding: 10px 14px;
 }
 
-
-/* === Footer === */
 footer {
   margin-top: 60px; padding: 20px 0;
   color: #69892C;
   font: 0.9rem 'Lora', serif;
-  text-align: left;
+  text-align: justify;
 }
 
-/* === BACP logo === */
 .bacp-logo {
   display: flex; align-items: center;
   margin: 60px 0 20px; padding-left: 10px;
@@ -130,93 +126,67 @@ footer {
   height: 95px; width: auto; max-width: 100%;
 }
 
-/* === FAQ toggles === */
 summary {
   font: 700 1.15rem 'Montserrat', sans-serif;
   color: #69892C;
   cursor: pointer;
   user-select: none;
+  text-align: justify;
 }
 
 summary::-webkit-details-marker { display: none; }
-summary::marker { display: none; }  /* ✅ Add this line */
+summary::marker { display: none; }
+summary::before { content: "► "; color: #789E2D; }
+details[open] summary::before { content: "▼ "; }
 
-summary::before {
-  content: "► ";
-  color: #789E2D;
-}
-
-details[open] summary::before {
-  content: "▼ ";
-}
-
-/* === Card for details === */
 details {
   background: #fff; border-radius: 6px;
   padding: 20px 25px; margin-bottom: 25px;
   box-shadow: 0 2px 6px rgba(120,140,70,.15);
   font: 1rem 'Lora', serif; color: #555A4A;
+  text-align: justify;
 }
 
-/* -------------------------------------------------
-   === PAGE-SPECIFIC LAYOUT BLOCKS ===
-   ------------------------------------------------- */
-
-/* Shared block layout */
 .text-with-image {
   display: flex;
   align-items: flex-start;
   gap: 30px;
   margin-bottom: 60px;
   flex-wrap: wrap;
+  text-align: justify;
 }
 .block-image {
   width: 240px;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-.block-image img {
+  display: block;
   max-width: 100%;
-  max-height: 300px;
-  object-fit: cover;
 }
 .text-block {
   flex: 1 1 300px;
   min-width: 260px;
   width: 100%;
+  text-align: justify;
 }
 
-/* Coaching layout */
-.coaching-only .block-image.left { order: 0; }
-.coaching-only .block-image.right { order: 1; }
-
-/* Counselling layout */
-.counselling-only .block-image.left { order: 0; }
-.counselling-only .block-image.right { order: 1; }
-.counselling-only .text-without-image { margin-top: 60px; }
-
-/* Welcome layout */
-.welcome-only .block-image { flex: 0 0 260px; max-width: 100%; }
+.coaching-only .block-image.left,
+.counselling-only .block-image.left,
 .welcome-only .block-image.left { order: 0; }
+.coaching-only .block-image.right,
+.counselling-only .block-image.right,
 .welcome-only .block-image.right { order: 1; }
 
-/* -------------------------------------------------
-   === RESPONSIVE TWEAKS ===
-   ------------------------------------------------- */
-@media (max-width: 768px) {
-  .text-with-image {
-    flex-direction: column;
-  }
-  .block-image {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  .text-block {
-    width: 100%;
-  }
-   }
-/* === Floating Link Buttons on Home Page === */
+.counselling-only .text-without-image {
+  margin-top: 60px;
+  text-align: justify;
+}
+
+.welcome-only .block-image {
+  flex: 0 0 260px;
+  max-width: 100%;
+}
+
 .floating-links {
   position: fixed;
   bottom: 20px;
@@ -232,25 +202,29 @@ details {
   color: #000 !important;
   backdrop-filter: blur(5px);
 }
+
 .floating-link.translucent-button:hover {
   background: rgba(255,255,255,0.8) !important;
 }
+
 @media screen and (max-width: 768px) {
   body {
     padding: 10px;
     font-size: 1rem;
+    text-align: justify;
   }
 
   .text-with-image {
     flex-direction: column;
     align-items: center;
+    text-align: justify;
   }
 
   .text-with-image .text-block,
   .text-with-image img {
     width: 100%;
     max-width: 100%;
-    text-align: left;
+    text-align: justify;
   }
 
   .block-image.left,
@@ -293,9 +267,7 @@ details {
   }
 
   .sticky-contact {
-    bottom: 20px;
-    right: 20px;
-    font-size: 14px;
-    padding: 10px 14px;
+    font-size: 12px;
+    padding: 8px 12px;
   }
-
+}
