@@ -208,26 +208,31 @@ details {
 }
 
 @media screen and (max-width: 768px) {
-  body {
+  html, body {
     padding: 10px;
     font-size: 1rem;
+    text-align: justify;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
   .text-with-image {
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 20px;
   }
 
-  .block-image {
-    flex: 0 0 100px;
-    max-width: 40%;
-    margin: 0;
+  .text-with-image img.block-image {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
   }
 
   .text-block {
-    flex: 1 1 55%;
-    min-width: 200px;
-    width: auto;
+    width: 100%;
+    text-align: justify;
   }
 
   .nav-inner {
@@ -236,11 +241,10 @@ details {
   }
 
   .nav-links {
-    display: flex;
     flex-direction: column;
-    gap: 10px;
     width: 100%;
     padding: 0;
+    gap: 10px;
   }
 
   .nav-links li {
@@ -249,22 +253,34 @@ details {
 
   .nav-links a {
     display: block;
+    width: 100%;
     padding: 10px;
   }
 
   .site-logo img {
     max-width: 150px;
+    height: auto;
     margin-bottom: 10px;
   }
 
   .contact-buttons {
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
+    width: 100%;
   }
 
   .sticky-contact {
     font-size: 12px;
     padding: 8px 12px;
   }
-}
 
+  .block-image.left,
+  .block-image.right {
+    float: none;
+    margin: 20px 0;
+  }
+
+  footer {
+    text-align: justify;
+  }
+}
