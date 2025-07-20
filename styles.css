@@ -198,21 +198,12 @@ details {
   z-index: 9999;
 }
 
-.floating-link {
-  background-color: #789E2D;
-  color: white;
-  padding: 12px 20px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 1rem;
-  border-radius: 30px;
-  text-decoration: none;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  transition: background-color 0.3s ease;
+.floating-link.translucent-button {
+  background: rgba(255,255,255,0.6) !important;
+  color: #000 !important;
+  backdrop-filter: blur(5px);
 }
-
-.floating-link:hover {
-  background-color: #5F7F24;
-  color: #F5F7EC;
+.floating-link.translucent-button:hover {
+  background: rgba(255,255,255,0.8) !important;
 }
 }
