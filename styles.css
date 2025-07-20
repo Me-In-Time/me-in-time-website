@@ -218,21 +218,22 @@ details {
 
   .text-with-image {
     flex-direction: column;
-    align-items: flex-start;
     gap: 20px;
+    align-items: flex-start;
   }
 
-  .text-with-image img.block-image {
-    width: 100%;
+  .text-with-image .block-image {
+    width: 120px;
     height: auto;
-    max-width: 100%;
-    margin: 0 auto;
+    margin: 5px 20px 20px 0;
+    float: left;
     display: block;
   }
 
-  .text-block {
+  .text-with-image .text-block {
     width: 100%;
     text-align: justify;
+    overflow: hidden; /* helps contain float */
   }
 
   .nav-inner {
@@ -243,44 +244,5 @@ details {
   .nav-links {
     flex-direction: column;
     width: 100%;
-    padding: 0;
-    gap: 10px;
-  }
+    padding:
 
-  .nav-links li {
-    width: 100%;
-  }
-
-  .nav-links a {
-    display: block;
-    width: 100%;
-    padding: 10px;
-  }
-
-  .site-logo img {
-    max-width: 150px;
-    height: auto;
-    margin-bottom: 10px;
-  }
-
-  .contact-buttons {
-    flex-direction: column;
-    gap: 12px;
-    width: 100%;
-  }
-
-  .sticky-contact {
-    font-size: 12px;
-    padding: 8px 12px;
-  }
-
-  .block-image.left,
-  .block-image.right {
-    float: none;
-    margin: 20px 0;
-  }
-
-  footer {
-    text-align: justify;
-  }
-}
