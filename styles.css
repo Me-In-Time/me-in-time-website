@@ -211,6 +211,9 @@ details {
 .floating-link.translucent-button:hover {
   background: rgba(255,255,255,0.8) !important;
 }
+.floating-link {
+  border-radius: 30px;
+}
 
 @media screen and (max-width: 768px) {
   body {
