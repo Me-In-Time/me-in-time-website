@@ -5,6 +5,10 @@
   margin: 0;
   padding: 0;
 }
+body, p, h1, h2, h3, h4, h5, h6 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
 
 html {
   width: 100%;
@@ -338,8 +342,10 @@ details {
   }
 
   .text-block {
-    width: 100%;
-    text-align: left;
+  width: 100%;
+  text-align: left;
+  min-width: 0;
+
   }
 
  .img-wrap-left,
