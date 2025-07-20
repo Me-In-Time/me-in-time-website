@@ -208,32 +208,27 @@ details {
 }
 
 @media screen and (max-width: 768px) {
-  html, body {
+  body {
     padding: 10px;
     font-size: 1rem;
     text-align: justify;
-    max-width: 100%;
-    overflow-x: hidden;
   }
 
   .text-with-image {
-    flex-direction: column;
-    gap: 20px;
-    align-items: flex-start;
-  }
-
-  .text-with-image .block-image {
-    width: 120px;
-    height: auto;
-    margin: 5px 20px 20px 0;
-    float: left;
     display: block;
   }
 
-  .text-with-image .text-block {
+  .block-image {
+    width: 40%;
+    float: left;
+    margin: 0 20px 20px 0;
+    max-width: 150px;
+  }
+
+  .text-block {
+    display: block;
     width: 100%;
-    text-align: justify;
-    overflow: hidden; /* helps contain float */
+    overflow: hidden;
   }
 
   .nav-inner {
@@ -242,7 +237,36 @@ details {
   }
 
   .nav-links {
+    display: flex;
     flex-direction: column;
+    gap: 10px;
     width: 100%;
-    padding:
+    padding: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 10px;
+  }
+
+  .site-logo img {
+    max-width: 150px;
+    margin-bottom: 10px;
+  }
+
+  .contact-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .sticky-contact {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+}
+
 
