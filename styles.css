@@ -255,28 +255,36 @@ details {
 /* === Image + Text Layout === */
 .text-with-image {
   display: flex;
-  align-items: flex-start;
-  gap: 30px;
-  margin-bottom: 60px;
   flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  margin: 60px 0;
+}
+
+.text-with-image .text-block {
+  flex: 1 1 500px;
   text-align: justify;
 }
 
-.text-block {
-  flex: 1 1 300px;
-  min-width: 260px;
-  width: 100%;
-  text-align: justify;
-}
-
-.block-image {
-  width: 240px;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  display: block;
+.text-with-image img {
+  flex: 1 1 500px;
   max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+
+/* Alternate layout automatically */
+.text-with-image:nth-of-type(even) {
+  flex-direction: row-reverse;
+}
+
+/* Mobile stack */
+@media (max-width: 768px) {
+  .text-with-image {
+    flex-direction: column !important;
+  }
 
 /* === Site Logo === */
 .site-logo {
