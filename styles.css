@@ -44,7 +44,7 @@ img {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  color: #567235;
+  color: #6F814E; /* softer olive green */
   margin: 40px 0 20px;
   line-height: 1.2;
   text-align: justify;
@@ -62,8 +62,9 @@ ul {
 }
 
 a {
-  color: #69892C;
+  color: #8A9B5C; /* warmer sage green */
   text-decoration: none;
+
 }
 
 a:hover {
@@ -172,8 +173,8 @@ nav a:hover {
   bottom: 20px;
   right: 20px;
   z-index: 9999;
-  background: rgba(120, 158, 45, 0.75); /* translucent green */
-  backdrop-filter: blur(6px); /* subtle blur */
+  background: rgba(139, 162, 94, 0.75); /* soft olive translucent */
+  backdrop-filter: blur(6px);
   color: #fff;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.1rem;
@@ -183,11 +184,13 @@ nav a:hover {
   text-decoration: none;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transition: background 0.3s, transform 0.3s;
+}
 
-}.sticky-contact:hover {
-  background: rgba(95, 127, 36, 0.85); /* slightly darker translucent green */
+.sticky-contact:hover {
+  background: rgba(110, 135, 70, 0.85); /* slightly deeper on hover */
   color: #F5F7EC;
   transform: translateY(-2px);
+
 }
 
 /* === Footer === */
