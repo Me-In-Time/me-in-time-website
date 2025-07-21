@@ -415,22 +415,20 @@ details {
   /* Show hamburger */
   .hamburger {
     display: block;
-    margin-left: auto;
-    padding: 10px;
+    ...
   }
 
-  /* Hide nav links until toggled */
-  .nav-links {
+  ...
+  
+  /* Coaching & Counselling */
+  .coaching-only .text-with-image,
+  .counselling-only .text-with-image { ... }
+
+  ...
+
+  /* Hide second image on contact page */
+  .contact-only .text-with-image:nth-of-type(2) .block-image {
     display: none;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-    background-color: #E7E9D1;
-    padding: 10px 0;
-  }
-
-  .nav-links.nav-open {
-    display: flex;
   }
 
   /* Coaching & Counselling: stack text/image */
