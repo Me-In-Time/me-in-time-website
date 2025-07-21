@@ -365,7 +365,7 @@ details {
 /* === Desktop: Banner Logo Smaller & Alternating Layout === */
 @media screen and (min-width: 769px) {
   .site-logo img {
-    max-height: 40px;   /* Reduce height further if needed */
+    max-height: 20px;   /* Reduce height further if needed */
     height: auto;
     width: auto;
     margin-left: 10px;
