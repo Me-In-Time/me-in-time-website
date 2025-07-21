@@ -387,7 +387,6 @@ details {
     margin-bottom: 10px;
   }
 }
-
 /* === Alternating Layout (Desktop) === */
 @media screen and (min-width: 769px) {
   .text-with-image.image-left {
@@ -398,12 +397,16 @@ details {
     flex-direction: row-reverse;
   }
 
-  .counselling-only .alt-layout .text-with-image:nth-of-type(odd) {
+  .counselling-only .alt-layout .text-with-image:nth-of-type(odd),
+  .coaching-only .alt-layout .text-with-image:nth-of-type(odd) {
     flex-direction: row;
   }
 
-  .counselling-only .alt-layout .text-with-image:nth-of-type(even) {
+  .counselling-only .alt-layout .text-with-image:nth-of-type(even),
+  .coaching-only .alt-layout .text-with-image:nth-of-type(even) {
     flex-direction: row-reverse;
   }
 }
+
+
 
