@@ -3,14 +3,13 @@
 <head> 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Welcome | Me In Time Counselling & Coaching</title>
-  <meta name="description" content="Welcome to Me In Time – a space for reflection, support, and moving forward at your own pace." />
+  <title>Coaching | Me In Time Counselling & Coaching</title>
+  <meta name="description" content="Coaching support in Manchester and online – grounded, thoughtful, real-life direction without the hustle." />
   <link rel="stylesheet" href="styles.css?v=5" />
   <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <body class="coaching-only">
-  <!-- Navigation -->
   <nav>
     <div class="nav-inner">
       <div class="site-logo">
@@ -18,30 +17,19 @@
           <img src="images/meintime.png" alt="Me In Time logo" />
         </a>
       </div>
-
-      <!-- Hamburger Button -->
-      <button class="hamburger" type="button" aria-label="Toggle menu">
-  ☰
-</button>
-
-
-      <!-- Navigation Links -->
+      <button class="hamburger" type="button" aria-label="Toggle menu">☰</button>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="welcome-2.html" aria-current="page">Welcome</a></li>
+        <li><a href="welcome-2.html">Welcome</a></li>
         <li><a href="counselling.html">Counselling</a></li>
-        <li><a href="coaching.html">Coaching</a></li>
+        <li><a href="coaching.html" aria-current="page">Coaching</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="faq.html">FAQs</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Main Content -->
- <main class="coaching-main">
-  <div class="alt-layout">
-
-    <!-- Section 1 -->
+  <main>
     <div class="text-with-image">
       <div class="text-block">
         <h1>Coaching with Me In Time</h1>
@@ -50,7 +38,6 @@
       <img src="images/Tram.png" alt="Coaching support Manchester, Lancashire & Online – Me In Time" class="block-image" />
     </div>
 
-    <!-- Section 2 -->
     <div class="text-with-image">
       <img src="images/Tram2.png" alt="Exploring direction – man looking out tram window" class="block-image" />
       <div class="text-block">
@@ -59,7 +46,6 @@
       </div>
     </div>
 
-    <!-- Section 3 -->
     <div class="text-with-image">
       <div class="text-block">
         <h2>What We Might Work On</h2>
@@ -76,30 +62,29 @@
       <img src="images/Tram3.png" alt="Space to think – person seated alone reflecting" class="block-image" />
     </div>
 
-  </div> <!-- ✅ Close .alt-layout -->
+    <div class="text-without-image">
+      <h2>What Does It Involve?</h2>
+      <p>Coaching sessions last 60 minutes and are usually spaced fortnightly or monthly, depending on what feels helpful for you. We can meet online or in-person in Manchester — whichever suits your rhythm and routine.</p>
+      <p><strong>Standard Fee:</strong> £70 per session. I also offer a longer, one-off 90-minute “Clarity Session” for £90 — a deeper dive if you're facing a specific decision or feeling stuck.</p>
+      <p>If you're curious or simply want to talk things through, you’re welcome to <a href="contact.html">get in touch</a>. There's no pressure — just a chance to explore whether this feels like the right fit for you.</p>
+    </div>
+  </main>
 
-  <!-- Section 4 – No image -->
-  <div class="text-without-image">
-    <h2>What Does It Involve?</h2>
-    <p>Coaching sessions last 60 minutes and are usually spaced fortnightly or monthly, depending on what feels helpful for you. We can meet online or in-person in Manchester — whichever suits your rhythm and routine.</p>
-    <p><strong>Standard Fee:</strong> £70 per session. I also offer a longer, one-off 90-minute “Clarity Session” for £90 — a deeper dive if you're facing a specific decision or feeling stuck.</p>
-    <p>If you're curious or simply want to talk things through, you’re welcome to <a href="contact.html">get in touch</a>. There's no pressure — just a chance to explore whether this feels like the right fit for you.</p>
-  </div>
-</main>
+  <a href="contact.html" class="sticky-contact">Get in Touch</a>
 
-
-  <!-- Footer goes here -->
   <footer>
     &copy; 2025 Me In Time | Stuart Walker Counselling
   </footer>
 
-  <!-- JavaScript at the end of the body -->
   <script>
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('nav-open');
+    document.addEventListener('DOMContentLoaded', function () {
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+      if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+          navLinks.classList.toggle('nav-open');
+        });
+      }
     });
   </script>
 </body>
