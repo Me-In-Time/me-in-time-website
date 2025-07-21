@@ -100,14 +100,19 @@
   <a href="contact.html" class="sticky-contact sticky-translucent">Get in Touch</a>
 
   <!-- ✅ JavaScript just before closing body -->
-  <script>
+ <script>
+  document.addEventListener('DOMContentLoaded', function () {
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
 
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('nav-open');
-    });
-  </script>
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('nav-open');
+      });
+    }
+  });
+</script>
+
 </body>
 </html>
 
