@@ -3,13 +3,13 @@
 <head> 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Me In Time | Counselling & Coaching with Stuart Walker</title>
-  <meta name="description" content="Me In Time offers counselling and coaching with Stuart Walker. Based in Manchester, we provide a grounded, person-centred space for reflection, healing and change." />
+  <title>Welcome | Me In Time Counselling & Coaching</title>
+  <meta name="description" content="Welcome to Me In Time – a space for reflection, support, and moving forward at your own pace." />
   <link rel="stylesheet" href="styles.css?v=5" />
   <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@700&display=swap" rel="stylesheet">
 </head>
 
-<body class="welcome-only">
+<body class="index-only">
   <!-- Navigation -->
   <nav>
     <div class="nav-inner">
@@ -18,9 +18,16 @@
           <img src="images/meintime.png" alt="Me In Time logo" />
         </a>
       </div>
+
+      <!-- Hamburger Button -->
+      <button class="hamburger" aria-label="Toggle menu">
+        ☰
+      </button>
+
+      <!-- Navigation Links -->
       <ul class="nav-links">
-        <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="welcome-2.html">Welcome</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="welcome-2.html" aria-current="page">Welcome</a></li>
         <li><a href="counselling.html">Counselling</a></li>
         <li><a href="coaching.html">Coaching</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -95,17 +102,19 @@
     </div>
   </main>
 
-  <!-- Footer -->
+    <!-- Footer goes here -->
   <footer>
     &copy; 2025 Me In Time | Stuart Walker Counselling
   </footer>
 
-  <!-- Sticky Floating Buttons -->
-  <div class="floating-links">
-    <a href="counselling.html" class="floating-link translucent-button">More about Counselling</a>
-    <a href="coaching.html" class="floating-link translucent-button">More about Coaching</a>
-    <a href="contact.html" class="floating-link translucent-button">Get in Touch</a>
-  </div>
+  <!-- JavaScript at the end of the body -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
 
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('nav-open');
+    });
+  </script>
 </body>
 </html>
