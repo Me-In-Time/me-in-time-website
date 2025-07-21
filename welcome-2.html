@@ -18,6 +18,13 @@
           <img src="images/meintime.png" alt="Me In Time logo" />
         </a>
       </div>
+
+      <!-- Hamburger Button -->
+      <button class="hamburger" aria-label="Toggle menu">
+        ☰
+      </button>
+
+      <!-- Navigation Links -->
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="welcome-2.html" aria-current="page">Welcome</a></li>
@@ -88,7 +95,19 @@
     &copy; 2025 Me In Time | Stuart Walker Counselling
   </footer>
 
+ ...
   <!-- Sticky Contact Button -->
   <a href="contact.html" class="sticky-contact sticky-translucent">Get in Touch</a>
+
+  <!-- ✅ JavaScript just before closing body -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('nav-open');
+    });
+  </script>
 </body>
 </html>
+
