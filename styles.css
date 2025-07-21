@@ -406,6 +406,17 @@ details {
     height: auto;
     border-radius: 12px;
   }
+  .text-with-image {
+    flex-direction: column !important;
+  }
+
+  .text-with-image .text-block {
+    order: 0;
+  }
+
+  .text-with-image .block-image {
+    order: 1;
+  }
 }
 
 
