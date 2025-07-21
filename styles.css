@@ -415,7 +415,6 @@ details {
     width: 100%;
     text-align: left;
   }
-
   .coaching-only .text-with-image .block-image,
   .counselling-only .text-with-image .block-image {
     order: 1;
@@ -423,6 +422,15 @@ details {
     max-width: 100%;
     margin: 0 0 20px;
     display: block;
+ }
+    /* Mobile-only layout: text before image */
+.counselling-only .text-with-image .text-block,
+.coaching-only .text-with-image .text-block {
+  order: 0;
+}
+.counselling-only .text-with-image .block-image,
+.coaching-only .text-with-image .block-image {
+  order: 1;
+}
   }
-}
-}
+
