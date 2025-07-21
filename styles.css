@@ -105,23 +105,30 @@ nav a {
   background: rgba(255, 255, 255, .3);
   transition: .3s background;
 }
-nav a:hover {
-  background: rgba(255, 255, 255, .6);
-}
-
 /* === Hamburger Menu === */
 .hamburger {
   display: none;
 }
-@media screen and (max-width: 768px) {
+
+@media screen and (min-width: 769px) {
   .hamburger {
-    display: block;
-    margin-left: auto;
-    font-size: 1.5rem;
+    display: none !important;
+  }
+
+  .nav-links {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-end;
     background: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
+    padding: 0;
+  }
+
+  .nav-links li {
+    width: auto;
+  }
+
+  .nav-links a {
+    padding: 10px 15px;
   }
 }
 
@@ -129,6 +136,7 @@ nav a:hover {
 .nav-inner {
   flex-direction: column;
   align-items: flex-start;
+
 }
 .nav-links {
   display: none;
