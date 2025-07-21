@@ -173,6 +173,7 @@ nav a:hover {
   right: 20px;
   z-index: 9999;
   background: rgba(120, 158, 45, 0.75); /* translucent green */
+  backdrop-filter: blur(6px); /* subtle blur */
   color: #fff;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.1rem;
@@ -180,17 +181,14 @@ nav a:hover {
   padding: 14px 28px;
   border-radius: 35px;
   text-decoration: none;
-  backdrop-filter: blur(4px); /* optional subtle glass effect */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transition: background 0.3s, transform 0.3s;
-}
 
-.sticky-contact:hover {
-  background: #5F7F24;
+}.sticky-contact:hover {
+  background: rgba(95, 127, 36, 0.85); /* slightly darker translucent green */
   color: #F5F7EC;
   transform: translateY(-2px);
 }
-
 
 /* === Footer === */
 footer {
