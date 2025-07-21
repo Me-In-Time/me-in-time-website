@@ -323,7 +323,9 @@ details {
   }
 
   .site-logo img {
-    max-width: 140px;
+  height: auto;
+  max-height: 120px;
+  width: auto;
   }
 
   .sticky-contact {
@@ -336,4 +338,19 @@ details {
     height: auto;
     border-radius: 12px;
   }
+/* === Alternating Layout (Desktop) === */
+@media screen and (min-width: 769px) {
+  .counselling-only main > .text-with-image:nth-of-type(odd) {
+    flex-direction: row;
+  }
+
+  .counselling-only main > .text-with-image:nth-of-type(even) {
+    flex-direction: row-reverse;
+  }
 }
+
+/* === Mobile Layout === */
+@media screen and (max-width: 768px) {
+}
+  }
+
