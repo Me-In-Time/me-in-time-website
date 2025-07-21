@@ -342,14 +342,23 @@ details {
     height: auto;
     border-radius: 12px;
   }
-
 /* === Alternating Layout (Desktop) === */
 @media screen and (min-width: 769px) {
+  /* For coaching (uses manual .image-left / .image-right) */
   .text-with-image.image-left {
     flex-direction: row;
   }
 
   .text-with-image.image-right {
+    flex-direction: row-reverse;
+  }
+
+  /* For counselling (uses automatic .alt-layout) */
+  .counselling-only .alt-layout .text-with-image:nth-of-type(odd) {
+    flex-direction: row;
+  }
+
+  .counselling-only .alt-layout .text-with-image:nth-of-type(even) {
     flex-direction: row-reverse;
   }
 }
