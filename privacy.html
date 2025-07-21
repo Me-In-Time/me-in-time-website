@@ -115,10 +115,18 @@
       <img src="images/BACP-Logo.png" alt="BACP Accredited logo" />
     </div>
   </main>
+...
+  <!-- Sticky Contact Button -->
+  <a href="contact.html" class="sticky-contact sticky-translucent">Get in Touch</a>
 
-  <!-- Footer -->
-  <footer>
-    &copy; 2025 Me In Time | Stuart Walker Counselling | <a href="privacy.html">Privacy & Confidentiality</a>
-  </footer>
+  <!-- ✅ JavaScript just before closing body -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('nav-open');
+    });
+  </script>
 </body>
 </html>
