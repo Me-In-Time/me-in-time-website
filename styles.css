@@ -343,8 +343,8 @@ details {
 
   .text-with-image .block-image {
     order: 1;
-    width: 75%;
-    max-width: 75%;
+    width: 85%;
+    max-width: 85%;
     margin: 0 0 20px;
     display: block;
   }
