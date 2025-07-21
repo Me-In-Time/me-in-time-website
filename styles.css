@@ -348,7 +348,7 @@ details {
 /* === Mobile: Banner Logo Larger === */
 @media screen and (max-width: 768px) {
   .site-logo img {
-    max-height: 90px;
+    max-height: 120px;
   }
 
   .sticky-contact {
@@ -361,7 +361,6 @@ details {
     height: auto;
     border-radius: 12px;
   }
-}
 
 /* === Desktop: Banner Logo Smaller & Alternating Layout === */
 @media screen and (min-width: 769px) {
