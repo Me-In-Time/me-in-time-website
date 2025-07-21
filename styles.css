@@ -1,4 +1,5 @@
 /* v5 - updated layout and mobile tweaks */
+
 /* === Reset & Base Layout === */
 * {
   box-sizing: border-box;
@@ -27,7 +28,6 @@ body {
   text-align: justify;
   max-width: 1260px; /* Wider content on desktop */
   width: 96%;        /* Allows some flexibility on big screens */
-
 }
 
 img {
@@ -63,7 +63,6 @@ ul {
 a {
   color: #8A9B5C; /* warmer sage green */
   text-decoration: none;
-
 }
 
 a:hover {
@@ -189,7 +188,6 @@ nav a:hover {
   background: rgba(110, 135, 70, 0.85); /* slightly deeper on hover */
   color: #F5F7EC;
   transform: translateY(-2px);
-
 }
 
 /* === Footer === */
@@ -237,7 +235,6 @@ summary::before {
 
 details[open] summary::before {
   content: "▼ ";
-
 }
 
 details {
@@ -276,6 +273,7 @@ details {
   display: block;
   max-width: 100%;
 }
+
 /* Counselling alternating image/text layout on desktop */
 @media screen and (min-width: 769px) {
   .counselling-only .alt-layout .text-with-image:nth-of-type(odd) {
@@ -300,6 +298,7 @@ details {
   width: auto;
   display: block;
 }
+
 /* === Mobile Layout & Enhancements === */
 @media screen and (max-width: 768px) {
   .text-with-image,
@@ -406,5 +405,4 @@ details {
   .text-with-image.image-right {
     flex-direction: row-reverse;
   }
-
-
+}
