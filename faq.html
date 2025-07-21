@@ -116,16 +116,134 @@
    <!-- Footer goes here -->
   <footer>
     &copy; 2025 Me In Time | Stuart Walker Counselling
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome | Me In Time Counselling & Coaching</title>
+  <meta name="description" content="Welcome to Me In Time – a space for reflection, support, and moving forward at your own pace." />
+  <link rel="stylesheet" href="styles.css?v=5" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body class="index-only">
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-inner">
+      <div class="site-logo">
+        <a href="index.html">
+          <img src="images/meintime.png" alt="Me In Time logo" />
+        </a>
+      </div>
+
+      <!-- Hamburger Button -->
+      <button class="hamburger" aria-label="Toggle menu">
+        ☰
+      </button>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="welcome-2.html" aria-current="page">Welcome</a></li>
+        <li><a href="counselling.html">Counselling</a></li>
+        <li><a href="coaching.html">Coaching</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQs</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Section: Stuart Intro -->
+    <div class="text-with-image">
+      <div class="text-block">
+        <h1>Welcome to Me In Time</h1>
+        <p>Hi, and thanks for dropping by.
+        I know that even just visiting a site like this can take something — courage, curiosity, or maybe a quiet sense that something needs to shift. If you're here, it’s probably because something matters to you right now.</p>
+
+        <p>Maybe you’re feeling overwhelmed, stuck, or simply tired of carrying things alone. Maybe you're not sure what you're looking for — only that you’d like somewhere to land for a while.</p>
+
+        <p>Me In Time is a space for just that.</p>
+
+        <p>No pressure. No rush. Just a place where you can pause, breathe, and be met with honesty, care, and real support — whether that’s through counselling, coaching, or simply taking the first step.</p>
+
+        <p>You don’t have to have all the answers.<br>
+        You don’t even need to have the questions.</p>
+
+        <p>You're welcome here, as you are.<br>
+        Take your time. Look around. And if something feels right, I’d love to hear from you.</p>
+      </div>
+      <div>
+        <img src="images/Stuart.png" alt="Stuart Walker, Counsellor in Manchester" class="block-image" />
+        <div class="bacp-logo">
+          <img src="images/BACP-Logo.png" alt="BACP Accredited Counsellor Logo" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Welcome Image -->
+    <div class="text-with-image">
+      <img src="images/welcome-image.png" alt="Counselling welcome image with supportive tone" class="block-image" />
+
+      <div class="text-block">
+        <h2>Start Where You Are</h2>
+        <p>Whether you're exploring coaching, considering counselling, or simply have questions — you don’t need to have it all figured out to begin. There’s no pressure here, no judgement — just space to pause, reflect, and feel heard. If something inside you is quietly saying “maybe now,” I’m here to listen.</p>
+      </div>
+    </div>
+
+    <!-- Section: Privacy Signpost & Crisis Support -->
+    <div class="text-block">
+      <p>
+        <strong>
+          <a href="privacy.html" class="translucent-button" style="display:inline-block; margin-bottom: 20px;">
+            📄 Read About Privacy, Ethics & Confidentiality
+          </a>
+        </strong>
+      </p>
+
+      <h2>This Isn’t a Crisis Service</h2>
+      <p>
+        While I'm here to offer support, reflection, and steady guidance — I’m not a 24-hour crisis service. 
+        If you're in urgent distress or need immediate help, please reach out to one of the following services:
+      </p>
+
+      <ul>
+        <li><strong>Samaritans:</strong> 24/7 support via <a href="tel:116123">116 123</a>, email <a href="mailto:jo@samaritans.org">jo@samaritans.org</a>, or <a href="https://www.samaritans.org/" target="_blank">samaritans.org</a></li>
+        <li><strong>Shout:</strong> Text "SHOUT" to <strong>85258</strong> for 24/7 text-based support</li>
+        <li><strong>NHS 111:</strong> Call <a href="tel:111">111</a> and choose option 2 for urgent mental health support</li>
+        <li><strong>PAPYRUS:</strong> For under-35s struggling with thoughts of suicide — call <a href="tel:08000684141">0800 068 4141</a></li>
+        <li><strong>Childline:</strong> Free support for those under 19 — visit <a href="https://www.childline.org.uk/" target="_blank">childline.org.uk</a></li>
+        <li><strong>CALM:</strong> Call <a href="tel:0800585858">0800 58 58 58</a> (5pm–midnight daily) or use <a href="https://www.thecalmzone.net/" target="_blank">webchat</a></li>
+      </ul>
+    </div>
+  </main>
+
+    <!-- Footer goes here -->
+  <footer>
+    &copy; 2025 Me In Time | Stuart Walker Counselling
   </footer>
 
-  <!-- JavaScript at the end of the body -->
-  <script>
+
+...
+ <!-- Sticky Contact Button -->
+  <a href="contact.html" class="sticky-contact sticky-translucent">Get in Touch</a>
+
+  <!-- ✅ JavaScript just before closing body -->
+ <script>
+  document.addEventListener('DOMContentLoaded', function () {
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
 
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('nav-open');
-    });
-  </script>
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('nav-open');
+      });
+    }
+  });
+</script>
+
 </body>
+</html>
 </html>
