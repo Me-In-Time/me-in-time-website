@@ -196,11 +196,11 @@ summary::marker {
   display: none;
 }
 summary::before {
-  content: "â–º ";
+  content: "\25BA "; /* ► right-pointing triangle */
   color: #789E2D;
 }
 details[open] summary::before {
-  content: "â–¼ ";
+  content: "\25BC "; /* ▼ down-pointing triangle */
 }
 details {
   background: #fff;
