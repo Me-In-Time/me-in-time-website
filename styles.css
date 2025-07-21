@@ -196,11 +196,11 @@ summary::marker {
   display: none;
 }
 summary::before {
-  content: "► ";
+  content: "â–º ";
   color: #789E2D;
 }
 details[open] summary::before {
-  content: "▼ ";
+  content: "â–¼ ";
 }
 details {
   background: #fff;
@@ -446,4 +446,3 @@ details {
     display: none;
   }
 }
-
