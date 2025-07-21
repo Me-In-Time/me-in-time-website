@@ -375,9 +375,6 @@ details {
     display: flex;
     align-items: center;
   }
-}
-
-
 
   .counselling-only .text-with-image:nth-of-type(odd) {
     flex-direction: row;
