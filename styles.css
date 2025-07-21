@@ -393,13 +393,12 @@ details {
   }
 }
 
-/* === Alternating Layout (Desktop) === */
 @media screen and (min-width: 769px) {
-  .text-with-image.image-left {
+  .alt-layout .text-with-image:nth-of-type(odd) {
     flex-direction: row;
   }
 
-  .text-with-image.image-right {
+  .alt-layout .text-with-image:nth-of-type(even) {
     flex-direction: row-reverse;
   }
 }
