@@ -276,6 +276,16 @@ details {
   display: block;
   max-width: 100%;
 }
+/* Counselling alternating image/text layout on desktop */
+@media screen and (min-width: 769px) {
+  .counselling-only .alt-layout .text-with-image:nth-of-type(odd) {
+    flex-direction: row;
+  }
+
+  .counselling-only .alt-layout .text-with-image:nth-of-type(even) {
+    flex-direction: row-reverse;
+  }
+}
 
 /* === Site Logo === */
 .site-logo {
