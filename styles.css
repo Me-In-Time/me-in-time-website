@@ -391,18 +391,24 @@ details {
   }
 
   .nav-links.nav-open {
-    display: flex;
-  }
+  display: flex;
+}
 
-  .nav-links li {
-    width: 100%;
-  }
+.nav-links li {
+  width: 100%;
+}
 
-  .nav-links a {
-    display: block;
-    padding: 10px;
-  }
+.nav-links a {
+  display: block;
+  padding: 10px;
+}
 
+/* === Hamburger: hidden on desktop === */
+.hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
   .hamburger {
     display: block;
     margin-left: auto;
@@ -411,6 +417,11 @@ details {
     border: none;
     cursor: pointer;
     padding: 10px;
+  }
+
+  .site-logo img {
+    max-width: 150px;
+    margin-bottom: 10px;
   }
 
   .site-logo img {
