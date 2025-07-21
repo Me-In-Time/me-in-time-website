@@ -365,70 +365,57 @@ details {
   }
 
   .nav-links {
+    display: none;
     flex-direction: column;
     gap: 10px;
     width: 100%;
-    padding: 0;
+    background-color: #E7E9D1;
+    padding: 10px 0;
+  }
+
+  .nav-links.nav-open {
+    display: flex;
   }
 
   .nav-links li {
-  width: 100%;
-}
-
-.nav-links a {
-  display: block;
-  padding: 10px;
-}
-
-.site-logo img {
-  max-width: 150px;
-  margin-bottom: 10px;
-}
-
-.contact-buttons {
-  flex-direction: column;
-  gap: 10px;
-}
-
-.sticky-contact {
-  font-size: 12px;
-  padding: 8px 12px;
-  border-radius: 30px;
-}
-.bacp-logo img {
-  max-width: 140px;
-  height: auto;
-  border-radius: 12px;
-}
-
-/* === Hamburger Button === */
-.hamburger {
-  display: none;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-/* === Mobile Styles === */
-@media screen and (max-width: 768px) {
-  /* Show hamburger */
-  .hamburger {
-    display: block;
-    ...
+    width: 100%;
   }
 
-  ...
-  
-  /* Coaching & Counselling */
-  .coaching-only .text-with-image,
-  .counselling-only .text-with-image { ... }
+  .nav-links a {
+    display: block;
+    padding: 10px;
+  }
 
-  ...
+  .hamburger {
+    display: block;
+    margin-left: auto;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+  }
 
-  /* Hide second image on contact page */
-  .contact-only .text-with-image:nth-of-type(2) .block-image {
-    display: none;
+  .site-logo img {
+    max-width: 150px;
+    margin-bottom: 10px;
+  }
+
+  .contact-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .sticky-contact {
+    font-size: 12px;
+    padding: 8px 12px;
+    border-radius: 30px;
+  }
+
+  .bacp-logo img {
+    max-width: 140px;
+    height: auto;
+    border-radius: 12px;
   }
 
   /* Coaching & Counselling: stack text/image */
