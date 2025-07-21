@@ -206,7 +206,7 @@ footer {
 }
 
 .bacp-logo img {
-  height: 95px;
+  height: 120px;
   width: auto;
   max-width: 100%;
   border-radius: 12px;
@@ -324,7 +324,7 @@ details {
 
   .site-logo img {
   height: auto;
-  max-height: 120px;
+  max-height: 80px;
   width: auto;
   }
 
@@ -338,19 +338,20 @@ details {
     height: auto;
     border-radius: 12px;
   }
+/* === Site Logo (Fix for Oversized Banner Logo) === */
+.site-logo img {
+  height: auto;
+  max-height: 80px;
+  width: auto;
+}
+
 /* === Alternating Layout (Desktop) === */
 @media screen and (min-width: 769px) {
-  .counselling-only main > .text-with-image:nth-of-type(odd) {
+  .counselling-only .alt-layout .text-with-image:nth-of-type(odd) {
     flex-direction: row;
   }
 
-  .counselling-only main > .text-with-image:nth-of-type(even) {
+  .counselling-only .alt-layout .text-with-image:nth-of-type(even) {
     flex-direction: row-reverse;
   }
 }
-
-/* === Mobile Layout === */
-@media screen and (max-width: 768px) {
-}
-  }
-
