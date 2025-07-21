@@ -348,7 +348,7 @@ details {
 /* === Mobile: Banner Logo Larger === */
 @media screen and (max-width: 768px) {
   .site-logo img {
-    max-height: 80px;
+    max-height: 90px;
   }
 
   .sticky-contact {
