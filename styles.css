@@ -341,17 +341,17 @@ details {
 /* === Site Logo (Fix for Oversized Banner Logo) === */
 .site-logo img {
   height: auto;
-  max-height: 80px;
+  max-height: 40px;
   width: auto;
 }
 
 /* === Alternating Layout (Desktop) === */
 @media screen and (min-width: 769px) {
-  .counselling-only .alt-layout .text-with-image:nth-of-type(odd) {
+  .counselling-only .text-with-image:nth-of-type(odd) {
     flex-direction: row;
   }
 
-  .counselling-only .alt-layout .text-with-image:nth-of-type(even) {
+  .counselling-only .text-with-image:nth-of-type(even) {
     flex-direction: row-reverse;
   }
 }
