@@ -3,13 +3,13 @@
 <head> 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FAQs | Me In Time Counselling & Coaching</title>
-  <meta name="description" content="Frequently asked questions about counselling and coaching with Stuart Walker at Me In Time." />
+  <title>Welcome | Me In Time Counselling & Coaching</title>
+  <meta name="description" content="Welcome to Me In Time – a space for reflection, support, and moving forward at your own pace." />
   <link rel="stylesheet" href="styles.css?v=5" />
   <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@700&display=swap" rel="stylesheet">
 </head>
 
-<body class="counselling-only">
+<body class="faq-only">
   <!-- Navigation -->
   <nav>
     <div class="nav-inner">
@@ -18,13 +18,20 @@
           <img src="images/meintime.png" alt="Me In Time logo" />
         </a>
       </div>
+
+      <!-- Hamburger Button -->
+      <button class="hamburger" aria-label="Toggle menu">
+        ☰
+      </button>
+
+      <!-- Navigation Links -->
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="welcome-2.html">Welcome</a></li>
+        <li><a href="welcome-2.html" aria-current="page">Welcome</a></li>
         <li><a href="counselling.html">Counselling</a></li>
         <li><a href="coaching.html">Coaching</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="faq.html" aria-current="page">FAQs</a></li>
+        <li><a href="faq.html">FAQs</a></li>
       </ul>
     </div>
   </nav>
@@ -106,12 +113,19 @@
     </div>
   </main>
 
-  <!-- Footer -->
+   <!-- Footer goes here -->
   <footer>
     &copy; 2025 Me In Time | Stuart Walker Counselling
   </footer>
 
-  <!-- Sticky Contact Button -->
-  <a href="contact.html" class="sticky-contact sticky-translucent">Get in Touch</a>
+  <!-- JavaScript at the end of the body -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('nav-open');
+    });
+  </script>
 </body>
 </html>
