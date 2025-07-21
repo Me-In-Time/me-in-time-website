@@ -1,4 +1,4 @@
-/* v5 - force refresh */
+/* v5 - updated layout and mobile tweaks */
 /* === Reset & Base Layout === */
 * {
   box-sizing: border-box;
@@ -72,36 +72,8 @@ nav {
   position: relative;
   background: url("images/manchester-skyline.jpg") center/cover no-repeat;
   border-radius: 10px;
-  margin: 0 auto 40px;
-  max-width: 1100px;
-  padding: 20px 0;
-  box-shadow: 0 4px 12px rgba(70, 90, 40, .5);
-}
+  margin:
 
-nav::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 255, .4);
-  border-radius: 10px;
-  z-index: 0;
-}
-
-.nav-inner {
-  position: relative;
-  z-index: 1;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.site-logo img {
-  height: 120px;
-  width: auto;
-}
 
 nav ul {
   display: flex;
