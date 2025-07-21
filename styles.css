@@ -342,17 +342,14 @@ details {
     height: auto;
     border-radius: 12px;
   }
-}
 
 /* === Alternating Layout (Desktop) === */
 @media screen and (min-width: 769px) {
-  .coaching-only .text-with-image:nth-of-type(odd),
-  .counselling-only .alt-layout .text-with-image:nth-of-type(odd) {
+  .text-with-image.image-left {
     flex-direction: row;
   }
 
-  .coaching-only .text-with-image:nth-of-type(even),
-  .counselling-only .alt-layout .text-with-image:nth-of-type(even) {
+  .text-with-image.image-right {
     flex-direction: row-reverse;
   }
 }
