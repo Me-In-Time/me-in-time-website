@@ -339,16 +339,36 @@ details {
     border-radius: 12px;
   }
 }
-
-/* === Site Logo (Fix for Oversized Banner Logo) === */
+/* === Site Logo (Default) === */
 .site-logo img {
   height: auto;
-  max-height: 60px;
   width: auto;
 }
 
-/* === Alternating Layout (Desktop) === */
+/* === Mobile: Banner Logo Larger === */
+@media screen and (max-width: 768px) {
+  .site-logo img {
+    max-height: 80px;
+  }
+
+  .sticky-contact {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .bacp-logo img {
+    max-width: 180px;
+    height: auto;
+    border-radius: 12px;
+  }
+}
+
+/* === Desktop: Banner Logo Smaller & Alternating Layout === */
 @media screen and (min-width: 769px) {
+  .site-logo img {
+    max-height: 30px;
+  }
+
   .counselling-only .text-with-image:nth-of-type(odd) {
     flex-direction: row;
   }
@@ -357,3 +377,4 @@ details {
     flex-direction: row-reverse;
   }
 }
+
