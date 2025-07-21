@@ -348,7 +348,7 @@ details {
 /* === Mobile: Banner Logo Larger === */
 @media screen and (max-width: 768px) {
   .site-logo img {
-    max-height: 150px;
+    max-height: 170px;
   }
 
   .sticky-contact {
@@ -365,8 +365,19 @@ details {
 /* === Desktop: Banner Logo Smaller & Alternating Layout === */
 @media screen and (min-width: 769px) {
   .site-logo img {
-    max-height: 30px;
+    max-height: 40px;   /* Reduce height further if needed */
+    height: auto;
+    width: auto;
+    margin-left: 10px;
   }
+
+  .site-logo {
+    display: flex;
+    align-items: center;
+  }
+}
+
+
 
   .counselling-only .text-with-image:nth-of-type(odd) {
     flex-direction: row;
