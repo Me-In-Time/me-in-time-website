@@ -459,14 +459,13 @@ details {
     width: 100%;
     text-align: left;
   }
+.coaching-only .text-with-image .block-image,
+.counselling-only .text-with-image .block-image {
+  order: 1;
+  max-width: 85%;
+  margin: 20px auto;
+  display: block;
 
-  .coaching-only .text-with-image .block-image,
-  .counselling-only .text-with-image .block-image {
-    order: 1;
-    width: 100%;
-    max-width: 100%;
-    margin: 0 0 20px;
-    display: block;
   }
 
   /* Hide second image on contact page */
