@@ -274,13 +274,13 @@ details {
   max-width: 100%;
 }
 
-/* Counselling alternating image/text layout on desktop */
+/* Coaching alternating image/text layout on desktop */
 @media screen and (min-width: 769px) {
-  .counselling-only .alt-layout .text-with-image:nth-of-type(odd) {
+  .coaching-only .alt-layout .text-with-image:nth-of-type(odd) {
     flex-direction: row;
   }
 
-  .counselling-only .alt-layout .text-with-image:nth-of-type(even) {
+  .coaching-only .alt-layout .text-with-image:nth-of-type(even) {
     flex-direction: row-reverse;
   }
 }
@@ -302,8 +302,7 @@ details {
 /* === Mobile Layout & Enhancements === */
 @media screen and (max-width: 768px) {
   .text-with-image,
-  .coaching-only .text-with-image,
-  .counselling-only .text-with-image {
+  .coaching-only .text-with-image {
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
@@ -311,16 +310,14 @@ details {
   }
 
   .text-with-image .text-block,
-  .coaching-only .text-with-image .text-block,
-  .counselling-only .text-with-image .text-block {
+  .coaching-only .text-with-image .text-block {
     order: 0;
     width: 100%;
     text-align: left;
   }
 
   .text-with-image .block-image,
-  .coaching-only .text-with-image .block-image,
-  .counselling-only .text-with-image .block-image {
+  .coaching-only .text-with-image .block-image {
     order: 1;
     width: 85%;
     max-width: 85%;
