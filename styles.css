@@ -308,6 +308,16 @@ details {
 .floating-link {
   border-radius: 30px;
 }
+/* === Coaching & Counselling alternating layout (desktop only) === */
+.coaching-only .text-with-image:nth-of-type(odd),
+.counselling-only .text-with-image:nth-of-type(odd) {
+  flex-direction: row;
+}
+
+.coaching-only .text-with-image:nth-of-type(even),
+.counselling-only .text-with-image:nth-of-type(even) {
+  flex-direction: row-reverse;
+}
 
 /* === Responsive (Mobile) === */
 @media screen and (max-width: 768px) {
