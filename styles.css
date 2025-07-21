@@ -347,12 +347,12 @@ details {
 /* === Alternating Layout (Desktop) === */
 @media screen and (min-width: 769px) {
   .coaching-only .text-with-image:nth-of-type(odd),
-  .counselling-only .text-with-image:nth-of-type(odd) {
+  .counselling-only .alt-layout .text-with-image:nth-of-type(odd) {
     flex-direction: row;
   }
 
   .coaching-only .text-with-image:nth-of-type(even),
-  .counselling-only .text-with-image:nth-of-type(even) {
+  .counselling-only .alt-layout .text-with-image:nth-of-type(even) {
     flex-direction: row-reverse;
   }
 }
