@@ -291,8 +291,7 @@ details {
   width: auto;
   display: block;
 }
-
-/* === Mobile Layout === */
+/* === Mobile Layout & Enhancements === */
 @media screen and (max-width: 768px) {
   .text-with-image,
   .coaching-only .text-with-image,
@@ -337,73 +336,27 @@ details {
     height: auto;
   }
 
- .sticky-contact {
-  font-size: 1rem;
-  padding: 12px 20px;
-  background: rgba(120, 158, 45, 0.75); /* translucent green */
-  backdrop-filter: blur(4px); /* adds soft blur behind */
-  border-radius: 35px;
-  color: #fff;
-  font-weight: 700;
-}
-
+  .sticky-contact {
+    font-size: 1rem;
+    padding: 12px 20px;
+    background: rgba(120, 158, 45, 0.75);
+    backdrop-filter: blur(4px);
+    border-radius: 35px;
+    color: #fff;
+    font-weight: 700;
+  }
 
   .bacp-logo img {
     max-width: 220px;
     height: auto;
     border-radius: 12px;
   }
-/* === Alternating Layout (Desktop) === */
-@media screen and (min-width: 769px) {
-  /* For coaching (uses manual .image-left / .image-right) */
-  .text-with-image.image-left {
-    flex-direction: row;
-  }
 
-  .text-with-image.image-right {
-    flex-direction: row-reverse;
-  }
-
-  /* For counselling (uses automatic .alt-layout) */
-  .counselling-only .alt-layout .text-with-image:nth-of-type(odd) {
-    flex-direction: row;
-  }
-
-  .counselling-only .alt-layout .text-with-image:nth-of-type(even) {
-    flex-direction: row-reverse;
-  }
-/* === Mobile Adjustments for Headings and Text Alignment === */
-@media screen and (max-width: 768px) {
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  h2 {
-    font-size: 1.4rem;
-  }
-
-  h3 {
-    font-size: 1.2rem;
-  }
-
-  body,
-  p,
-  h1, h2, h3, h4, h5, h6,
-  .text-block,
-  footer,
-  summary,
-  details {
-    text-align: left !important;
-  }
-/* === Mobile Enhancements === */
-@media screen and (max-width: 768px) {
-  /* Softer padding */
   body {
     padding: 20px 16px;
     line-height: 1.5;
   }
 
-  /* Scalable, responsive headings */
   h1 {
     font-size: clamp(1.8rem, 5vw, 2.2rem);
   }
@@ -416,7 +369,6 @@ details {
     font-size: clamp(1.2rem, 4vw, 1.5rem);
   }
 
-  /* Ensure left-aligned text */
   body,
   p,
   h1, h2, h3, h4, h5, h6,
@@ -427,7 +379,6 @@ details {
     text-align: left !important;
   }
 
-  /* Better list readability */
   ul {
     padding-left: 1.2rem;
   }
@@ -436,3 +387,23 @@ details {
     margin-bottom: 10px;
   }
 }
+
+/* === Alternating Layout (Desktop) === */
+@media screen and (min-width: 769px) {
+  .text-with-image.image-left {
+    flex-direction: row;
+  }
+
+  .text-with-image.image-right {
+    flex-direction: row-reverse;
+  }
+
+  .counselling-only .alt-layout .text-with-image:nth-of-type(odd) {
+    flex-direction: row;
+  }
+
+  .counselling-only .alt-layout .text-with-image:nth-of-type(even) {
+    flex-direction: row-reverse;
+  }
+}
+
