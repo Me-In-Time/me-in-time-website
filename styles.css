@@ -397,12 +397,4 @@ details {
     flex-direction: row-reverse;
   }
 
-  .counselling-only .alt-layout .text-with-image:nth-of-type(odd) {
-    flex-direction: row;
-  }
-
-  .counselling-only .alt-layout .text-with-image:nth-of-type(even) {
-    flex-direction: row-reverse;
-  }
-}
 
