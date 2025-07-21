@@ -396,13 +396,7 @@ details {
   }
 /* === Alternating Layout (Desktop) === */
 @media screen and (min-width: 769px) {
-  .counselling-only .alt-layout .text-with-image:nth-of-type(odd),
-  .coaching-only .alt-layout .text-with-image:nth-of-type(odd) {
-    flex-direction: row;
-  }
-
-  .counselling-only .alt-layout .text-with-image:nth-of-type(even),
-  .coaching-only .alt-layout .text-with-image:nth-of-type(even) {
+  .text-with-image:nth-of-type(even) {
     flex-direction: row-reverse;
   }
 }
