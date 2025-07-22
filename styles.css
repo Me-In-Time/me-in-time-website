@@ -26,8 +26,8 @@ body {
   margin: 40px auto;
   padding: 20px;
   text-align: justify;
-  max-width: 1260px;
-  width: 96%;
+  max-width: 1260px; /* Wider content on desktop */
+  width: 96%;        /* Allows some flexibility on big screens */
 }
 
 img {
@@ -43,19 +43,16 @@ img {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  color: #6F814E;
-  margin-top: 24px;
-  margin-bottom: 12px;
-  line-height: 1.3;
+  color: #6F814E; /* softer olive green */
+  margin: 40px 0 20px;
+  line-height: 1.2;
   text-align: justify;
 }
 
-h1 {
-  font-size: 2.4rem;
-}
+h1 { font-size: 2.4rem; }
 
 p, ul {
-  margin-bottom: 12px;
+  margin: 0 0 20px;
   text-align: justify;
 }
 
@@ -64,7 +61,7 @@ ul {
 }
 
 a {
-  color: #8A9B5C;
+  color: #8A9B5C; /* warmer sage green */
   text-decoration: none;
 }
 
@@ -72,49 +69,336 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Shared layout for Coaching and Counselling pages */
-.alt-layout-only p,
-.alt-layout-only h1,
-.alt-layout-only h2,
-.alt-layout-only h3,
-.alt-layout-only h4,
-.alt-layout-only h5,
-.alt-layout-only h6 {
-  line-height: 1.5;
-  margin-bottom: 12px;
+/* === Navigation === */
+nav {
+  position: relative;
+  background: url("images/manchester-skyline.jpg") center/cover no-repeat;
+  border-radius: 10px;
+  margin: 0 auto 40px;
+  max-width: 1100px;
+  padding: 20px 0;
+  box-shadow: 0 4px 12px rgba(70, 90, 40, .5);
 }
 
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  padding: 10px 15px;
+  border-radius: 30px;
+  font-size: 1.4rem;
+  background: rgba(255, 255, 255, .3);
+  transition: .3s background;
+}
+
+nav a:hover {
+  background: rgba(255, 255, 255, .6);
+}
+
+/* === Hamburger Menu === */
+.hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+    font-size: 4rem;
+    background: none;
+    border: none;
+    color: #000;
+    margin-left: auto;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #E7E9D1;
+    width: 100%;
+    padding: 10px 0;
+    gap: 10px;
+  }
+
+  .nav-links.nav-open {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 10px;
+    text-align: left;
+  }
+}
+
+/* === Buttons === */
+.button-link,
+.contact-button,
+.sticky-contact {
+  display: inline-block;
+  background: #789E2D;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font: 700 1rem 'Montserrat', sans-serif;
+  text-decoration: none;
+  margin-bottom: 12px;
+  transition: 0.3s background;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button-link:hover,
+.contact-button:hover,
+.sticky-contact:hover {
+  background: #5F7F24;
+  color: #F5F7EC;
+}
+
+.sticky-contact {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  background: rgba(139, 162, 94, 0.75); /* soft olive translucent */
+  backdrop-filter: blur(6px);
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: 35px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s, transform 0.3s;
+}
+
+.sticky-contact:hover {
+  background: rgba(110, 135, 70, 0.85); /* slightly deeper on hover */
+  color: #F5F7EC;
+  transform: translateY(-2px);
+}
+
+/* === Footer === */
+footer {
+  margin-top: 60px;
+  padding: 20px 0;
+  color: #69892C;
+  font: 0.9rem 'Lora', serif;
+  text-align: justify;
+}
+
+/* === BACP Logo === */
+.bacp-logo {
+  display: flex;
+  align-items: center;
+  margin: 60px 0 20px;
+  padding-left: 10px;
+}
+
+.bacp-logo img {
+  height: 120px;
+  width: auto;
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+/* === FAQ Summary === */
+summary {
+  font: 700 1.15rem 'Montserrat', sans-serif;
+  color: #69892C;
+  cursor: pointer;
+  user-select: none;
+  text-align: justify;
+}
+
+summary::-webkit-details-marker,
+summary::marker {
+  display: none;
+}
+
+summary::before {
+  content: "► ";
+  color: #789E2D;
+}
+
+details[open] summary::before {
+  content: "▼ ";
+}
+
+details {
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 6px rgba(120,140,70,.15);
+  font: 1rem 'Lora', serif;
+  color: #555A4A;
+  text-align: justify;
+}
+
+/* === Image + Text Layout === */
+.text-with-image {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+  text-align: justify;
+}
+
+.text-block {
+  flex: 1 1 300px;
+  min-width: 260px;
+  width: 100%;
+  text-align: justify;
+}
+
+.block-image {
+  width: 240px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: block;
+  max-width: 100%;
+}
+
+/* Coaching alternating image/text layout on desktop */
 @media screen and (min-width: 769px) {
-  .alt-layout-only .alt-layout .text-with-image:nth-of-type(odd) {
+  .coaching-only .alt-layout .text-with-image:nth-of-type(odd) {
     flex-direction: row;
   }
 
-  .alt-layout-only .alt-layout .text-with-image:nth-of-type(even) {
+  .coaching-only .alt-layout .text-with-image:nth-of-type(even) {
     flex-direction: row-reverse;
   }
 }
 
+/* === Site Logo === */
+.site-logo {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.site-logo img {
+  max-height: 180px;
+  height: auto;
+  width: auto;
+  display: block;
+}
+
+/* === Mobile Layout & Enhancements === */
 @media screen and (max-width: 768px) {
-  .alt-layout-only .text-with-image {
+  .text-with-image,
+  .coaching-only .text-with-image {
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
     margin-bottom: 40px;
   }
 
-  .alt-layout-only .text-with-image .text-block {
+  .text-with-image .text-block,
+  .coaching-only .text-with-image .text-block {
     order: 0;
     width: 100%;
     text-align: left;
   }
 
-  .alt-layout-only .text-with-image .block-image {
+  .text-with-image .block-image,
+  .coaching-only .text-with-image .block-image {
     order: 1;
     width: 85%;
     max-width: 85%;
     margin: 0 auto 20px;
     display: block;
   }
+
+  .block-image,
+  .img-wrap-left,
+  .img-wrap-right {
+    float: none !important;
+    display: block;
+    margin: 0 auto 20px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .site-logo img {
+    max-height: 140px;
+    width: auto;
+    height: auto;
+  }
+
+  .sticky-contact {
+    font-size: 1rem;
+    padding: 12px 20px;
+    background: rgba(120, 158, 45, 0.75);
+    backdrop-filter: blur(4px);
+    border-radius: 35px;
+    color: #fff;
+    font-weight: 700;
+  }
+
+  .bacp-logo img {
+    max-width: 220px;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  body {
+    padding: 20px 16px;
+    line-height: 1.5;
+  }
+
+  h1 {
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
+  }
+
+  h2 {
+    font-size: clamp(1.4rem, 4.5vw, 1.8rem);
+  }
+
+  h3, h4, h5, h6 {
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
+  }
+
+  body,
+  p,
+  h1, h2, h3, h4, h5, h6,
+  .text-block,
+  footer,
+  summary,
+  details {
+    text-align: left !important;
+  }
+
+  ul {
+    padding-left: 1.2rem;
+  }
+
+  ul li {
+    margin-bottom: 10px;
+  }
 }
 
-/* Additional shared styles omitted for brevity â€” assumed already validated by user */
+@media screen and (min-width: 769px) {
+  .alt-layout .text-with-image:nth-of-type(odd) {
+    flex-direction: row;
+  }
+
+  .alt-layout .text-with-image:nth-of-type(even) {
+    flex-direction: row-reverse;
+  }
+}
