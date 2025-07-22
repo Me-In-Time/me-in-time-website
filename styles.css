@@ -69,40 +69,47 @@ a:hover {
   text-decoration: underline;
 }
 
-/* === Navigation === */
+/* === Universal Navigation Banner === */
 nav {
   position: relative;
-  background: url("images/manchester-skyline.jpg") center/cover no-repeat;
+  background: url("images/manchester-skyline.jpg") center center / cover no-repeat;
   border-radius: 10px;
   margin: 0 auto 40px;
   max-width: 1100px;
   padding: 20px 0;
-  box-shadow: 0 4px 12px rgba(70, 90, 40, .5);
+  box-shadow: 0 4px 12px rgba(70, 90, 40, 0.5);
+  color: #000; /* fallback text color */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
 }
 
+/* Navigation links container */
 nav ul {
   display: flex;
   gap: 20px;
   list-style: none;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
+/* Navigation links styling */
 nav a {
   color: #000;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
   padding: 10px 15px;
   border-radius: 30px;
   font-size: 1.4rem;
-  background: rgba(255, 255, 255, .3);
-  transition: .3s background;
+  background: rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+  transition: background 0.3s ease;
 }
 
-nav a:hover {
-  background: rgba(255, 255, 255, .6);
+nav a:hover,
+nav a[aria-current="page"] {
+  background: rgba(255, 255, 255, 0.6);
+  color: #5F7F24; /* slightly darker olive green */
 }
 
-/* === Hamburger Menu === */
+/* Hamburger menu for mobile */
 .hamburger {
   display: none;
 }
@@ -110,7 +117,7 @@ nav a:hover {
 @media screen and (max-width: 768px) {
   .hamburger {
     display: block;
-    font-size: 4rem;
+    font-size: 3.5rem;
     background: none;
     border: none;
     color: #000;
@@ -119,27 +126,29 @@ nav a:hover {
     z-index: 10;
   }
 
-  .nav-links {
+  nav ul {
     display: none;
     flex-direction: column;
-    background: #E7E9D1;
+    background: rgba(231, 233, 209, 0.95);
     width: 100%;
     padding: 10px 0;
     gap: 10px;
+    border-radius: 0 0 10px 10px;
   }
 
-  .nav-links.nav-open {
+  nav ul.nav-open {
     display: flex;
   }
 
-  .nav-links li {
+  nav ul li {
     width: 100%;
+    text-align: center;
   }
 
-  .nav-links a {
+  nav a {
     display: block;
     padding: 10px;
-    text-align: left;
+    font-size: 1.2rem;
   }
 }
 
