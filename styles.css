@@ -26,8 +26,8 @@ body {
   margin: 40px auto;
   padding: 20px;
   text-align: justify;
-  max-width: 1260px; /* Wider content on desktop */
-  width: 96%;        /* Allows some flexibility on big screens */
+  max-width: 1260px;
+  width: 96%;
 }
 
 img {
@@ -43,16 +43,19 @@ img {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  color: #6F814E; /* softer olive green */
-  margin: 40px 0 20px;
-  line-height: 1.2;
+  color: #6F814E;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  line-height: 1.3;
   text-align: justify;
 }
 
-h1 { font-size: 2.4rem; }
+h1 {
+  font-size: 2.4rem;
+}
 
 p, ul {
-  margin: 0 0 20px;
+  margin-bottom: 12px;
   text-align: justify;
 }
 
@@ -61,7 +64,7 @@ ul {
 }
 
 a {
-  color: #8A9B5C; /* warmer sage green */
+  color: #8A9B5C;
   text-decoration: none;
 }
 
@@ -78,12 +81,11 @@ nav {
   max-width: 1100px;
   padding: 20px 0;
   box-shadow: 0 4px 12px rgba(70, 90, 40, 0.5);
-  color: #000; /* fallback text color */
+  color: #000;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
 }
 
-/* Navigation links container */
 nav ul {
   display: flex;
   gap: 20px;
@@ -92,7 +94,6 @@ nav ul {
   justify-content: center;
 }
 
-/* Navigation links styling */
 nav a {
   color: #000;
   padding: 10px 15px;
@@ -106,10 +107,10 @@ nav a {
 nav a:hover,
 nav a[aria-current="page"] {
   background: rgba(255, 255, 255, 0.6);
-  color: #5F7F24; /* slightly darker olive green */
+  color: #5F7F24;
 }
 
-/* Hamburger menu for mobile */
+/* Hamburger Menu */
 .hamburger {
   display: none;
 }
@@ -180,7 +181,7 @@ nav a[aria-current="page"] {
   bottom: 20px;
   right: 20px;
   z-index: 9999;
-  background: rgba(139, 162, 94, 0.75); /* soft olive translucent */
+  background: rgba(139, 162, 94, 0.75);
   backdrop-filter: blur(6px);
   color: #fff;
   font-family: 'Montserrat', sans-serif;
@@ -194,15 +195,15 @@ nav a[aria-current="page"] {
 }
 
 .sticky-contact:hover {
-  background: rgba(110, 135, 70, 0.85); /* slightly deeper on hover */
+  background: rgba(110, 135, 70, 0.85);
   color: #F5F7EC;
   transform: translateY(-2px);
 }
 
 /* === Footer === */
 footer {
-  margin-top: 60px;
-  padding: 20px 0;
+  margin-top: 40px;
+  padding: 15px 0;
   color: #69892C;
   font: 0.9rem 'Lora', serif;
   text-align: justify;
@@ -212,7 +213,7 @@ footer {
 .bacp-logo {
   display: flex;
   align-items: center;
-  margin: 60px 0 20px;
+  margin: 40px 0 20px;
   padding-left: 10px;
 }
 
@@ -261,8 +262,8 @@ details {
 .text-with-image {
   display: flex;
   align-items: flex-start;
-  gap: 30px;
-  margin-bottom: 60px;
+  gap: 15px; /* tightened gap */
+  margin-bottom: 40px; /* tightened margin */
   flex-wrap: wrap;
   text-align: justify;
 }
@@ -291,27 +292,6 @@ details {
 
   .coaching-only .alt-layout .text-with-image:nth-of-type(even) {
     flex-direction: row-reverse;
-  }
-
-  /* Tighten text spacing on desktop */
-  h1, h2, h3, h4, h5, h6 {
-    margin-top: 24px;
-    margin-bottom: 12px;
-    line-height: 1.3;
-  }
-
-  p, ul {
-    margin-bottom: 12px;
-  }
-
-  .text-with-image {
-    gap: 15px;
-    margin-bottom: 40px;
-  }
-
-  footer {
-    margin-top: 40px;
-    padding: 15px 0;
   }
 }
 
