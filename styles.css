@@ -71,6 +71,53 @@ a {
 a:hover {
   text-decoration: underline;
 }
+/* === Coaching Only Specific Styles === */
+.coaching-only body,
+.coaching-only p,
+.coaching-only h1, 
+.coaching-only h2, 
+.coaching-only h3, 
+.coaching-only h4, 
+.coaching-only h5, 
+.coaching-only h6 {
+  /* You can override or tighten text spacing here if needed */
+  line-height: 1.5; /* slightly tighter line height */
+  margin-bottom: 12px; /* tighter paragraph spacing */
+}
+
+/* Coaching page - alternating image/text layout on desktop */
+@media screen and (min-width: 769px) {
+  .coaching-only .alt-layout .text-with-image:nth-of-type(odd) {
+    flex-direction: row;
+  }
+  .coaching-only .alt-layout .text-with-image:nth-of-type(even) {
+    flex-direction: row-reverse;
+  }
+}
+
+/* Coaching page - mobile stacking and spacing */
+@media screen and (max-width: 768px) {
+  .coaching-only .text-with-image {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .coaching-only .text-with-image .text-block {
+    order: 0;
+    width: 100%;
+    text-align: left;
+  }
+
+  .coaching-only .text-with-image .block-image {
+    order: 1;
+    width: 85%;
+    max-width: 85%;
+    margin: 0 auto 20px;
+    display: block;
+  }
+}
 
 /* === Universal Navigation Banner === */
 nav {
