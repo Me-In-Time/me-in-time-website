@@ -72,7 +72,18 @@ a:hover {
   text-decoration: underline;
 }
 
-/* === Shared layout styles for counselling & coaching pages === */
+/* === Shared layout for Coaching and Counselling pages === */
+.alt-layout-only p,
+.alt-layout-only h1,
+.alt-layout-only h2,
+.alt-layout-only h3,
+.alt-layout-only h4,
+.alt-layout-only h5,
+.alt-layout-only h6 {
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
 @media screen and (min-width: 769px) {
   .alt-layout-only .alt-layout .text-with-image:nth-of-type(odd) {
     flex-direction: row;
@@ -104,7 +115,9 @@ a:hover {
     margin: 0 auto 20px;
     display: block;
   }
-/* === Universal Navigation Banner === */
+}
+
+/* === Navigation === */
 nav {
   position: relative;
   background: url("images/manchester-skyline.jpg") center center / cover no-repeat;
@@ -142,7 +155,6 @@ nav a[aria-current="page"] {
   color: #5F7F24;
 }
 
-/* Hamburger Menu */
 .hamburger {
   display: none;
 }
@@ -271,12 +283,12 @@ summary::marker {
 }
 
 summary::before {
-  content: "► ";
+  content: "â–º ";
   color: #789E2D;
 }
 
 details[open] summary::before {
-  content: "▼ ";
+  content: "â–¼ ";
 }
 
 details {
@@ -294,8 +306,8 @@ details {
 .text-with-image {
   display: flex;
   align-items: flex-start;
-  gap: 15px; /* tightened gap */
-  margin-bottom: 40px; /* tightened margin */
+  gap: 15px;
+  margin-bottom: 40px;
   flex-wrap: wrap;
   text-align: justify;
 }
@@ -316,39 +328,21 @@ details {
   max-width: 100%;
 }
 
-/* === Site Logo === */
-.site-logo {
-  display: flex;
-  align-items: center;
-  margin-left: 20px;
-}
-
-.site-logo img {
-  max-height: 180px;
-  height: auto;
-  width: auto;
-  display: block;
-}
-
-/* === Mobile Layout & Enhancements === */
 @media screen and (max-width: 768px) {
-  .text-with-image,
-  .coaching-only .text-with-image {
+  .text-with-image {
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
     margin-bottom: 40px;
   }
 
-  .text-with-image .text-block,
-  .coaching-only .text-with-image .text-block {
+  .text-with-image .text-block {
     order: 0;
     width: 100%;
     text-align: left;
   }
 
-  .text-with-image .block-image,
-  .coaching-only .text-with-image .block-image {
+  .text-with-image .block-image {
     order: 1;
     width: 85%;
     max-width: 85%;
@@ -421,15 +415,5 @@ details {
 
   ul li {
     margin-bottom: 10px;
-  }
-}
-
-@media screen and (min-width: 769px) {
-  .alt-layout .text-with-image:nth-of-type(odd) {
-    flex-direction: row;
-  }
-
-  .alt-layout .text-with-image:nth-of-type(even) {
-    flex-direction: row-reverse;
   }
 }
