@@ -1,43 +1,66 @@
 /* v5 - updated layout and mobile tweaks */
 
-/* === Reset & Base Layout === */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body, p, h1, h2, h3, h4, h5, h6 {
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-
-html {
-  width: 100%;
-  overflow-x: hidden;
-}
-
-body {
+/* === Container and general styles === */
+.alt-layout {
+  max-width: 1260px;
+  margin: 40px auto;
   font-family: 'Lora', serif;
   color: #555A4A;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  background: #FAF3E0;
-  margin: 40px auto;
-  padding: 20px;
   text-align: justify;
-  max-width: 1260px; /* Wider content on desktop */
-  width: 96%;        /* Allows some flexibility on big screens */
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+/* === Text + Image wrapper === */
+.text-with-image {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
 }
+
+/* === Text block === */
+.text-block {
+  flex: 1;
+  min-width: 260px;
+}
+
+/* === Images === */
+.block-image {
+  width: 240px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-width: 100%;
+  display: block;
+}
+
+/* === Alternate layout on desktop for even children === */
+@media screen and (min-width: 769px) {
+  .alt-layout .text-with-image:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}
+
+/* === Mobile responsive stacking === */
+@media screen and (max-width: 768px) {
+  .text-with-image {
+    flex-direction: column !important;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .text-block {
+    width: 100%;
+    order: 0;
+    text-align: left;
+  }
+
+  .block-image {
+    width: 85%;
+    max-width: 85%;
+    margin: 0 auto 20px;
+    order: 1;
+  }
 
 /* === Headings === */
 h1, h2, h3, h4, h5, h6 {
